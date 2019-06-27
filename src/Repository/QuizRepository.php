@@ -22,7 +22,7 @@ class QuizRepository extends ServiceEntityRepository
     public function findLastQuizzes($limit)
     {
       return $this->createQueryBuilder('q')
-                  ->select('q.title as title, q.description as description')
+                  ->select('q.title as title, q.description as description, q.slug as slug')
                   ->groupBy('q')
                   ->orderBy('q.createdAt','DESC')
                   ->setMaxResults($limit)
