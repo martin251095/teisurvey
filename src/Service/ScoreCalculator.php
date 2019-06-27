@@ -35,7 +35,7 @@ class ScoreCalculator
             $scoreCategories[$category->getId()] = 0.0;
 
             // Get all questions for current category
-            $questions = $category->getCategory()->getQuestions();
+            $questions = $category->getQuestions();
 
             // $maxCategories: max possible score for each Category in an array
             // $maxQuestions: max possible score for each Question in an array
