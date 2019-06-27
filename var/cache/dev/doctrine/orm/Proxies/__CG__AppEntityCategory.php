@@ -64,10 +64,10 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lft', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lvl', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'rgt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'root', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'parent', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'children', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'quizzes', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'locale', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameFr', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameNl'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lft', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lvl', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'rgt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'root', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'parent', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'children', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'locale', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameFr', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameNl', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'quizzes'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lft', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lvl', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'rgt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'root', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'parent', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'children', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'quizzes', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'locale', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameFr', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameNl'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'name', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lft', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'lvl', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'rgt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'root', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'parent', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'children', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'questions', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'locale', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameFr', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'nameNl', '' . "\0" . 'App\\Entity\\Category' . "\0" . 'quizzes'];
     }
 
     /**
@@ -356,39 +356,6 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getQuizzes(): \Doctrine\Common\Collections\Collection
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getQuizzes', []);
-
-        return parent::getQuizzes();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function addQuiz(\App\Entity\Quiz $quiz): \App\Entity\Category
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addQuiz', [$quiz]);
-
-        return parent::addQuiz($quiz);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function removeQuiz(\App\Entity\Quiz $quiz): \App\Entity\Category
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeQuiz', [$quiz]);
-
-        return parent::removeQuiz($quiz);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function setTranslatableLocale($locale)
     {
 
@@ -450,6 +417,39 @@ class Category extends \App\Entity\Category implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setNameNl', [$nameNl]);
 
         return parent::setNameNl($nameNl);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getQuizzes(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getQuizzes', []);
+
+        return parent::getQuizzes();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addQuiz(\App\Entity\Quiz $quiz): \App\Entity\Category
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addQuiz', [$quiz]);
+
+        return parent::addQuiz($quiz);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeQuiz(\App\Entity\Quiz $quiz): \App\Entity\Category
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeQuiz', [$quiz]);
+
+        return parent::removeQuiz($quiz);
     }
 
 }

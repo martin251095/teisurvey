@@ -131,14 +131,14 @@ class QuizController extends AbstractController
         // foreach category set the form view with the linked question and the linked answer of that category
         foreach ($quiz->getCategories() as $category) {
 
-            $formData[$i] = ['name' => $category->getCategory()->getName()];
+            $formData[$i] = ['name' => $category->getName()];
 
-            foreach ($category->getCategory()->getQuestions() as $question) {
+            foreach ($category->getQuestions() as $question) {
                 $isMultiple = $question->isMultipleAnswers();
                 $choices = [];
 
                 foreach ($question->getAnswers() as $answer) {
-                    $choices[$category->getCategory()->getName()][$answer->getAnswer()] = $question->getId().'-'.$answer->getId();
+                    $choices[$category->getName()][$answer->getAnswer()] = $question->getId().'-'.$answer->getId();
                 }
 
                 $formData[$i]['questions'][$j] = $question->getLongQuestion();

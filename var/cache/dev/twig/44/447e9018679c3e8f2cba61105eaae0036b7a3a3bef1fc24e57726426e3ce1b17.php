@@ -239,84 +239,43 @@ class __TwigTemplate_4a901b8acb14a0b4d243696899f9ce857c52e35e30064cb0f27e99de25b
                 // line 87
                 echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 87, $this->source); })()), "description", [], "any", false, false, false, 87), 'row');
                 echo "
-                        <div class=\"title_survey_admin\">Categories</div>
-                        <div class=\"row js-quiz-category-wrapper\"
-                             data-prototype=\"";
-                // line 90
-                echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 90, $this->source); })()), "categories", [], "any", false, false, false, 90), "vars", [], "any", false, false, false, 90), "prototype", [], "any", false, false, false, 90), 'widget'), "html_attr");
-                echo "\"
-                             data-index=\"";
-                // line 91
-                echo twig_escape_filter($this->env, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 91, $this->source); })()), "categories", [], "any", false, false, false, 91)), "html", null, true);
-                echo "\">
-                            ";
-                // line 92
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 92, $this->source); })()), "categories", [], "any", false, false, false, 92));
-                foreach ($context['_seq'] as $context["_key"] => $context["quizCategoryForm"]) {
-                    // line 93
-                    echo "                                <div class=\"col-xs-4 js-quiz-category-item\">
-                                    ";
-                    // line 94
-                    echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($context["quizCategoryForm"], 'errors');
-                    echo "
-                                    ";
-                    // line 95
-                    echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["quizCategoryForm"], "category", [], "any", false, false, false, 95), 'row');
-                    echo "
-                                    ";
-                    // line 96
-                    echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, $context["quizCategoryForm"], "weight", [], "any", false, false, false, 96), 'row');
-                    echo "
-                                    <a href=\"#\" class=\"js-remove-quiz-category pull-right\">
-                                        <span class=\"fa fa-close\"></span>
-                                        Delete
-                                    </a>
-                                </div>
-                            ";
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['quizCategoryForm'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 103
-                echo "                            <a href=\"#\" class=\"js-quiz-category-add\">
-                                <span class=\"fa fa-plus-circle\"></span>
-                                Add Another Category
-                            </a>
-                        </div>
                         ";
-                // line 108
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 108, $this->source); })()), "sendingEmail", [], "any", false, false, false, 108), 'row');
+                // line 88
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 88, $this->source); })()), "categories", [], "any", false, false, false, 88), 'row');
                 echo "
                         ";
-                // line 109
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 109, $this->source); })()), "sendingEmailLanguage", [], "any", false, false, false, 109), 'row');
+                // line 89
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 89, $this->source); })()), "sendingEmail", [], "any", false, false, false, 89), 'row');
+                echo "
+                        ";
+                // line 90
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 90, $this->source); })()), "sendingEmailLanguage", [], "any", false, false, false, 90), 'row');
                 echo "
                     ";
             } else {
-                // line 111
+                // line 92
                 echo "                        ";
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 111, $this->source); })()), ("title" . twig_capitalize_string_filter($this->env, $context["locale"])), [], "any", false, false, false, 111), 'row');
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 92, $this->source); })()), ("title" . twig_capitalize_string_filter($this->env, $context["locale"])), [], "any", false, false, false, 92), 'row');
                 echo "
                         ";
-                // line 112
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 112, $this->source); })()), ("description" . twig_capitalize_string_filter($this->env, $context["locale"])), [], "any", false, false, false, 112), 'row');
+                // line 93
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 93, $this->source); })()), ("description" . twig_capitalize_string_filter($this->env, $context["locale"])), [], "any", false, false, false, 93), 'row');
                 echo "
                     ";
             }
-            // line 114
+            // line 95
             echo "                </div>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['locale'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 116
+        // line 97
         echo "        </div>
         <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fas fa-check\"></i>Create</button>
         ";
-        // line 118
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 118, $this->source); })()), 'form_end');
+        // line 99
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 99, $this->source); })()), 'form_end');
         echo "
     </div>
 ";
@@ -340,7 +299,7 @@ class __TwigTemplate_4a901b8acb14a0b4d243696899f9ce857c52e35e30064cb0f27e99de25b
 
     public function getDebugInfo()
     {
-        return array (  319 => 118,  315 => 116,  308 => 114,  303 => 112,  298 => 111,  293 => 109,  289 => 108,  282 => 103,  269 => 96,  265 => 95,  261 => 94,  258 => 93,  254 => 92,  250 => 91,  246 => 90,  240 => 87,  235 => 86,  233 => 85,  229 => 84,  222 => 83,  219 => 82,  215 => 81,  211 => 79,  199 => 77,  195 => 76,  188 => 75,  185 => 74,  182 => 73,  178 => 72,  173 => 70,  136 => 35,  130 => 34,  117 => 25,  106 => 16,  103 => 15,  99 => 14,  91 => 8,  81 => 7,  62 => 3,  51 => 1,  49 => 5,  36 => 1,);
+        return array (  278 => 99,  274 => 97,  267 => 95,  262 => 93,  257 => 92,  252 => 90,  248 => 89,  244 => 88,  240 => 87,  235 => 86,  233 => 85,  229 => 84,  222 => 83,  219 => 82,  215 => 81,  211 => 79,  199 => 77,  195 => 76,  188 => 75,  185 => 74,  182 => 73,  178 => 72,  173 => 70,  136 => 35,  130 => 34,  117 => 25,  106 => 16,  103 => 15,  99 => 14,  91 => 8,  81 => 7,  62 => 3,  51 => 1,  49 => 5,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -432,26 +391,7 @@ class __TwigTemplate_4a901b8acb14a0b4d243696899f9ce857c52e35e30064cb0f27e99de25b
                     {% if locale == 'en' %}
                         {{ form_row(form.title) }}
                         {{ form_row(form.description) }}
-                        <div class=\"title_survey_admin\">Categories</div>
-                        <div class=\"row js-quiz-category-wrapper\"
-                             data-prototype=\"{{ form_widget(form.categories.vars.prototype)|e('html_attr') }}\"
-                             data-index=\"{{ form.categories|length }}\">
-                            {% for quizCategoryForm in form.categories %}
-                                <div class=\"col-xs-4 js-quiz-category-item\">
-                                    {{ form_errors(quizCategoryForm) }}
-                                    {{ form_row(quizCategoryForm.category) }}
-                                    {{ form_row(quizCategoryForm.weight) }}
-                                    <a href=\"#\" class=\"js-remove-quiz-category pull-right\">
-                                        <span class=\"fa fa-close\"></span>
-                                        Delete
-                                    </a>
-                                </div>
-                            {% endfor %}
-                            <a href=\"#\" class=\"js-quiz-category-add\">
-                                <span class=\"fa fa-plus-circle\"></span>
-                                Add Another Category
-                            </a>
-                        </div>
+                        {{ form_row(form.categories) }}
                         {{ form_row(form.sendingEmail) }}
                         {{ form_row(form.sendingEmailLanguage) }}
                     {% else %}

@@ -5593,7 +5593,7 @@
       <tag name="console.command" command="server:run"/>
       <argument>/Users/mpo/Documents/TEIFINAL/symfony/public</argument>
       <argument>dev</argument>
-      <argument>/Users/mpo/Documents/TEIFINAL/symfony</argument>
+      <argument>/Users/mpo/Documents/TEIFINAL/symfony/var/cache</argument>
       <call method="setName">
         <argument>server:run</argument>
       </call>
@@ -5602,21 +5602,21 @@
       <tag name="console.command" command="server:start"/>
       <argument>/Users/mpo/Documents/TEIFINAL/symfony/public</argument>
       <argument>dev</argument>
-      <argument>/Users/mpo/Documents/TEIFINAL/symfony</argument>
+      <argument>/Users/mpo/Documents/TEIFINAL/symfony/var/cache</argument>
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
       <tag name="console.command" command="server:stop"/>
-      <argument>/Users/mpo/Documents/TEIFINAL/symfony</argument>
+      <argument>/Users/mpo/Documents/TEIFINAL/symfony/var/cache</argument>
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command" command="server:status"/>
-      <argument>/Users/mpo/Documents/TEIFINAL/symfony</argument>
+      <argument>/Users/mpo/Documents/TEIFINAL/symfony/var/cache</argument>
       <call method="setName">
         <argument>server:status</argument>
       </call>
@@ -6418,12 +6418,13 @@
         <argument key="quiz" type="service" id=".errored..service_locator.QmKf.zg.App\Entity\Quiz"/>
       </argument>
     </service>
-    <service id=".service_locator._VPkAa9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.TW_mS5m" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="answerRepository" type="service" id="App\Repository\AnswerRepository"/>
         <argument key="scoreCalculator" type="service" id="App\Service\ScoreCalculator"/>
-        <argument key="surveyAnswer" type="service" id=".errored..service_locator._VPkAa9.App\Entity\SurveyAnswer"/>
+        <argument key="surveyAnswer" type="service" id=".errored..service_locator.TW_mS5m.App\Entity\SurveyAnswer"/>
+        <argument key="translationManager" type="service" id="App\Service\TranslationManager"/>
       </argument>
     </service>
     <service id=".service_locator.T15j7tn" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -6554,7 +6555,7 @@
         <argument key="translationManager" type="service" id="App\Service\TranslationManager"/>
       </argument>
     </service>
-    <service id=".service_locator.RTDs3CS" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.K8GczcX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AccountController::login" type="service" id=".service_locator.oHXyyai"/>
@@ -6576,7 +6577,7 @@
         <argument key="App\Controller\Admin\AdminQuizController::edit" type="service" id=".service_locator.h35LeCl"/>
         <argument key="App\Controller\Admin\AdminQuizController::list" type="service" id=".service_locator.Aol1lKD"/>
         <argument key="App\Controller\Admin\AdminSurveyAnswerController::delete" type="service" id=".service_locator.T15j7tn"/>
-        <argument key="App\Controller\Admin\AdminSurveyAnswerController::details" type="service" id=".service_locator._VPkAa9"/>
+        <argument key="App\Controller\Admin\AdminSurveyAnswerController::details" type="service" id=".service_locator.TW_mS5m"/>
         <argument key="App\Controller\Admin\AdminSurveyAnswerController::list" type="service" id=".service_locator.nTaLniv"/>
         <argument key="App\Controller\Admin\AdminSurveyController::add" type="service" id=".service_locator.Q.mSVS2"/>
         <argument key="App\Controller\Admin\AdminSurveyController::delete" type="service" id=".service_locator.5v7YPbQ"/>
@@ -6617,7 +6618,7 @@
         <argument key="App\Controller\Admin\AdminQuizController:edit" type="service" id=".service_locator.h35LeCl"/>
         <argument key="App\Controller\Admin\AdminQuizController:list" type="service" id=".service_locator.Aol1lKD"/>
         <argument key="App\Controller\Admin\AdminSurveyAnswerController:delete" type="service" id=".service_locator.T15j7tn"/>
-        <argument key="App\Controller\Admin\AdminSurveyAnswerController:details" type="service" id=".service_locator._VPkAa9"/>
+        <argument key="App\Controller\Admin\AdminSurveyAnswerController:details" type="service" id=".service_locator.TW_mS5m"/>
         <argument key="App\Controller\Admin\AdminSurveyAnswerController:list" type="service" id=".service_locator.nTaLniv"/>
         <argument key="App\Controller\Admin\AdminSurveyController:add" type="service" id=".service_locator.Q.mSVS2"/>
         <argument key="App\Controller\Admin\AdminSurveyController:delete" type="service" id=".service_locator.5v7YPbQ"/>
@@ -7168,12 +7169,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.RTDs3CS"/>
+      <argument type="service" id=".service_locator.K8GczcX"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.RTDs3CS"/>
+      <argument type="service" id=".service_locator.K8GczcX"/>
     </service>
     <service id=".errored..service_locator.6cFgvLw.App\Entity\Answer" class="App\Entity\Answer"/>
     <service id=".errored..service_locator.iE43Exu.App\Entity\Answer" class="App\Entity\Answer"/>
@@ -7183,7 +7184,7 @@
     <service id=".errored..service_locator.nt3duaP.App\Entity\Question" class="App\Entity\Question"/>
     <service id=".errored..service_locator.h35LeCl.App\Entity\Quiz" class="App\Entity\Quiz"/>
     <service id=".errored..service_locator.QmKf.zg.App\Entity\Quiz" class="App\Entity\Quiz"/>
-    <service id=".errored..service_locator._VPkAa9.App\Entity\SurveyAnswer" class="App\Entity\SurveyAnswer"/>
+    <service id=".errored..service_locator.TW_mS5m.App\Entity\SurveyAnswer" class="App\Entity\SurveyAnswer"/>
     <service id=".errored..service_locator.T15j7tn.App\Entity\SurveyAnswer" class="App\Entity\SurveyAnswer"/>
     <service id=".errored..service_locator.ajfOkS9.App\Entity\Survey" class="App\Entity\Survey"/>
     <service id=".errored..service_locator.5v7YPbQ.App\Entity\Survey" class="App\Entity\Survey"/>
@@ -7583,7 +7584,7 @@
     <service id="fos_user.session" alias="session" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface" alias="webpack_encore.entrypoint_lookup_collection" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.RTDs3CS"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.K8GczcX"/>
     <service id="Symfony\Component\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="Symfony\Bundle\FrameworkBundle\Templating\EngineInterface" alias="templating.engine.delegating" public="false"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>

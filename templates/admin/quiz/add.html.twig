@@ -85,26 +85,7 @@
                     {% if locale == 'en' %}
                         {{ form_row(form.title) }}
                         {{ form_row(form.description) }}
-                        <div class="title_survey_admin">Categories</div>
-                        <div class="row js-quiz-category-wrapper"
-                             data-prototype="{{ form_widget(form.categories.vars.prototype)|e('html_attr') }}"
-                             data-index="{{ form.categories|length }}">
-                            {% for quizCategoryForm in form.categories %}
-                                <div class="col-xs-4 js-quiz-category-item">
-                                    {{ form_errors(quizCategoryForm) }}
-                                    {{ form_row(quizCategoryForm.category) }}
-                                    {{ form_row(quizCategoryForm.weight) }}
-                                    <a href="#" class="js-remove-quiz-category pull-right">
-                                        <span class="fa fa-close"></span>
-                                        Delete
-                                    </a>
-                                </div>
-                            {% endfor %}
-                            <a href="#" class="js-quiz-category-add">
-                                <span class="fa fa-plus-circle"></span>
-                                Add Another Category
-                            </a>
-                        </div>
+                        {{ form_row(form.categories) }}
                         {{ form_row(form.sendingEmail) }}
                         {{ form_row(form.sendingEmailLanguage) }}
                     {% else %}

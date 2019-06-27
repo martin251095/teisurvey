@@ -98,11 +98,6 @@ class Category implements Translatable
     private $updatedAt;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\QuizCategory", mappedBy="category")
-     */
-    private $quizzes;
-
-    /**
      * @Gedmo\Locale
      * Used locale to override Translation listener`s locale
      * this is not a mapped field of entity metadata, just a simple property
@@ -118,6 +113,11 @@ class Category implements Translatable
      * @var string
      */
     private $nameNl;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Quiz", mappedBy="categories")
+     */
+    private $quizzes;
 
     /**
      * Category constructor.
@@ -285,42 +285,6 @@ class Category implements Translatable
     }
 
     /**
-     * @return Collection|Quiz[]
-     */
-    public function getQuizzes(): Collection
-    {
-      return $this->quizzes;
-    }
-
-    /**
-     * @param \App\Entity\Quiz $quiz
-     * @return \App\Entity\Category
-     */
-    public function addQuiz(Quiz $quiz): self
-    {
-      if (!$this->quizzes->contains($quiz)) {
-        $this->quizzes[] = $quiz;
-        $quiz->addCategory($this);
-      }
-
-      return $this;
-    }
-
-    /**
-     * @param \App\Entity\Quiz $quiz
-     * @return self
-     */
-    public function removeQuiz(Quiz $quiz): self
-    {
-      if ($this->quizzes->contains($quiz)) {
-        $this->quizzes->removeElement($quiz);
-        $quiz->removeCategory($this);
-      }
-
-      return $this;
-    }
-
-    /**
      * @param $locale
      * @return self
      */
@@ -360,6 +324,34 @@ class Category implements Translatable
     public function setNameNl($nameNl): self
     {
         $this->nameNl = $nameNl;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Quiz[]
+     */
+    public function getQuizzes(): Collection
+    {
+        return $this->quizzes;
+    }
+
+    public function addQuiz(Quiz $quiz): self
+    {
+        if (!$this->quizzes->contains($quiz)) {
+            $this->quizzes[] = $quiz;
+            $quiz->addCategory($this);
+        }
+
+        return $this;
+    }
+
+    public function removeQuiz(Quiz $quiz): self
+    {
+        if ($this->quizzes->contains($quiz)) {
+            $this->quizzes->removeElement($quiz);
+            $quiz->removeCategory($this);
+        }
 
         return $this;
     }

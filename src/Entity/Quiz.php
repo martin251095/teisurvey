@@ -56,18 +56,6 @@ class Quiz
     private $slug;
 
     /**
-     * @ORM\OneToMany(
-     *   targetEntity="App\Entity\QuizCategory",
-     *   mappedBy="quiz",
-     *   fetch="EXTRA_LAZY",
-     *   orphanRemoval=true,
-     *   cascade={"persist"}
-     *)
-     * @ORM\OrderBy({"weight" = "ASC"})
-     */
-    private $categories;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\QuizAnswer", mappedBy="quiz", orphanRemoval=true)
      */
     private $quizAnswers;
@@ -122,6 +110,11 @@ class Quiz
      * @var string
      */
     private $descriptionNl;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Category", inversedBy="quizzes")
+     */
+    private $categories;
 
   /**
    * Quiz constructor.
@@ -185,43 +178,6 @@ class Quiz
     public function getSlug(): ?string
     {
         return $this->slug;
-    }
-
-    /**
-     * @return Collection|QuizCategory[]
-     */
-    public function getCategories(): Collection
-    {
-      return $this->categories;
-    }
-
-    /**
-     * @return array
-     */
-    public function getCategoriesName()
-    {
-
-      $categories = $this->categories->map(
-        function ($categories) {
-          return $categories->getCategory()->getName();
-        }
-      )->toArray();
-
-      return $categories;
-    }
-
-    /**
-     * @param QuizCategory $quizCategory
-     */
-    public function addCategory(QuizCategory $quizCategory)
-    {
-      if ($this->categories->contains($quizCategory)) {
-        return;
-      }
-
-      $this->categories[] = $quizCategory;
-      // needed to update the owning side of the relationship
-      $quizCategory->setQuiz($this);
     }
 
   /**
@@ -416,6 +372,23 @@ class Quiz
       $this->descriptionNl = $descriptionNl;
 
       return $this;
+    }
+
+    /**
+     * @return Collection|Category[]
+     */
+    public function getCategories(): Collection
+    {
+        return $this->categories;
+    }
+
+    public function addCategory(Category $category): self
+    {
+        if (!$this->categories->contains($category)) {
+            $this->categories[] = $category;
+        }
+
+        return $this;
     }
 
 }

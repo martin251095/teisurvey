@@ -2,7 +2,10 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Quiz;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -34,16 +37,28 @@ class QuizType extends ApplicationType
       ->add('description', TextareaType::class, $this->getConfiguration('Description', 'Description of the quiz'))
       ->add('descriptionFr', TextareaType::class, $this->getConfiguration('Description FR', 'Description of the quiz in French', ['required' => false]))
       ->add('descriptionNl', TextareaType::class, $this->getConfiguration('Description NL', 'Description of the quiz in Dutch', ['required' => false]))
-      ->add(
-        'categories',
-        CollectionType::class,
-        [
-          'entry_type' => QuizCategoryEmbeddedForm::class,
-          'allow_delete' => true,
-          'allow_add' => true,
-          'by_reference' => false,
-        ]
-      )
+      ->add('categories',
+            EntityType::class,
+            [
+              'class' => Category::class,
+              'query_builder' => function (EntityRepository $er) {
+                return $er->createQueryBuilder('c')
+                  ->addOrderBy('c.root', 'ASC')
+                  ->addOrderBy('c.lft', 'ASC');
+              },
+              'choice_label' => 'indentedName',
+              'expanded' => true,
+              'multiple' => true,
+              'choice_attr' => function (Category $category, $key, $index) {
+                $name = $category->getName();
+                $name = strtolower($name);
+                $lvl = 'lvl_'.$category->getLvl();
+                $isParentLeaf = $category->isLeaf() ? '' : 'd-none';
+
+                return ['class' => $lvl.' '.$isParentLeaf.' '.$name];
+              },
+            ]
+          )
       ->add('sendingEmail', EmailType::class, $sendingEmailOptions)
       ->add(
         'sendingEmailLanguage',
