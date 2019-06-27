@@ -85,6 +85,6 @@ class __TwigTemplate_0d6ec1f19eff9677c74ab4b9788eccf460f07b4cf5082cf60a10857a167
         return new Source("{% block fos_user_content %}
     {% include \"@FOSUser/Registration/register_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/register.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/bundles/FOSUserBundle/Registration/register.html.twig");
+", "@FOSUser/Registration/register.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/bundles/FOSUserBundle/Registration/register.html.twig");
     }
 }

@@ -17,7 +17,12 @@ return [[
         ],
         'js/survey' => [
             'js' => [
-                '/build/js/survey.27f519a7.js',
+                '/build/js/survey.750b98df.js',
+            ],
+        ],
+        'js/question' => [
+            'js' => [
+                '/build/js/question.d3c91278.js',
             ],
         ],
         'css/app' => [

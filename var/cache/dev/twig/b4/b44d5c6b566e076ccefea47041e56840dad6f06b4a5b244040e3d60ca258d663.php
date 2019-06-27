@@ -96,6 +96,6 @@ class __TwigTemplate_f90ce112010eee18ae7fd56f5d6e526d33e913559991cdd5913bfc4b0e7
 {% block fos_user_content %}
 {% include \"@FOSUser/ChangePassword/change_password_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "FOSUserBundle:ChangePassword:change_password.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig");
+", "FOSUserBundle:ChangePassword:change_password.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/ChangePassword/change_password.html.twig");
     }
 }

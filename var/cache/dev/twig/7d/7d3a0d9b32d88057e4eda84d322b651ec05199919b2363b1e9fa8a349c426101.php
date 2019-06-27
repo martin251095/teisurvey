@@ -174,6 +174,6 @@ class __TwigTemplate_61d171278bd3c63e720ed674e367f992927b5018a237782747e0978c715
         {% endif %}
     </div>
 {% endblock %}
-", "WebProfilerBundle:Profiler:open.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.html.twig");
+", "WebProfilerBundle:Profiler:open.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/open.html.twig");
     }
 }

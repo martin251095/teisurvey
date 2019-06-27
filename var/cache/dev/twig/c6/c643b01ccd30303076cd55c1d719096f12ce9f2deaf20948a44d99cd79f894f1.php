@@ -93,6 +93,6 @@ class __TwigTemplate_718541be5ef359fdbedea4a240871d3b8f71150ec9ff44aa7d00c37f252
         <input type=\"submit\" value=\"{{ 'group.edit.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "FOSUserBundle:Group:edit_content.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Group/edit_content.html.twig");
+", "FOSUserBundle:Group:edit_content.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Group/edit_content.html.twig");
     }
 }

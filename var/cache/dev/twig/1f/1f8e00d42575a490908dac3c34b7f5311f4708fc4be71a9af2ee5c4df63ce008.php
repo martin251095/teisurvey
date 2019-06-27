@@ -161,6 +161,6 @@ class __TwigTemplate_db8bf8763e6a9e469fc4d2e38bcdbb2344c98754b562d7545c1ce80c672
         </tr>
     </tbody>
 </table>
-", "TwigBundle:Exception:traces_text.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
+", "TwigBundle:Exception:traces_text.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
     }
 }

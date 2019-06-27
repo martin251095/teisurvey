@@ -63,6 +63,6 @@ class __TwigTemplate_df6612625d2b4acc2bdabb6ab1ac342c47f1ea7eba11aa48a2e0a9d908f
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'email']) ?>
-", "FrameworkBundle:Form:email_widget.html.php", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/framework-bundle/Resources/views/Form/email_widget.html.php");
+", "FrameworkBundle:Form:email_widget.html.php", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/framework-bundle/Resources/views/Form/email_widget.html.php");
     }
 }

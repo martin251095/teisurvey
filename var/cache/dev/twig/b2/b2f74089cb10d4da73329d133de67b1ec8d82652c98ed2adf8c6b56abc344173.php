@@ -80,6 +80,6 @@ class __TwigTemplate_e27c91cbfa07c67f3d820a4f136aa921188f83d7ef938601f61ca551815
 <div class=\"fos_user_group_show\">
     <p>{{ 'group.show.name'|trans }}: {{ group.getName() }}</p>
 </div>
-", "FOSUserBundle:Group:show_content.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Group/show_content.html.twig");
+", "FOSUserBundle:Group:show_content.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Group/show_content.html.twig");
     }
 }

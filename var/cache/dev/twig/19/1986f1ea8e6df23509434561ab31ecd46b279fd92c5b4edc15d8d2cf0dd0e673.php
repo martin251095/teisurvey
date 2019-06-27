@@ -102,6 +102,6 @@ class __TwigTemplate_fdba2c2cc9670f413b28226e3eb869a5f55fe8100f172d4a9c00a7d8085
 {{ include('@Twig/Exception/traces.txt.twig', { exception: e }, with_context = false) }}
 
 {% endfor %}
-", "TwigBundle:Exception:exception.txt.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/exception.txt.twig");
+", "TwigBundle:Exception:exception.txt.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/exception.txt.twig");
     }
 }

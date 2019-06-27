@@ -465,6 +465,6 @@ class __TwigTemplate_601e8cdeb4387a075990eca67655385957c0bfd15fc175fcf437ad835ae
         {{ form_end(form) }}
     </div>
 {% endblock %}
-", "admin/quiz/edit.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/quiz/edit.html.twig");
+", "admin/quiz/edit.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/quiz/edit.html.twig");
     }
 }

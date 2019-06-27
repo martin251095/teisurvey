@@ -81,6 +81,6 @@ class __TwigTemplate_9d6a4eab5f31f591ba4ee4d941d2658fdd932ddad1814abb21c00a54055
     public function getSourceContext()
     {
         return new Source("{% block panel '' %}
-", "WebProfilerBundle:Profiler:ajax_layout.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/ajax_layout.html.twig");
+", "WebProfilerBundle:Profiler:ajax_layout.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/ajax_layout.html.twig");
     }
 }

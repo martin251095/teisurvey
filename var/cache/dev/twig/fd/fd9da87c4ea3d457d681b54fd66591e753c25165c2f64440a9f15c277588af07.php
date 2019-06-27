@@ -108,6 +108,6 @@ class __TwigTemplate_857cb741cc5b0d614846a4b0ea68ad516148feb255c1afcea107b6141ec
     </exception>
 {% endfor %}
 </error>
-", "TwigBundle:Exception:exception.xml.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
+", "TwigBundle:Exception:exception.xml.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
     }
 }

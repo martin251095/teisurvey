@@ -96,6 +96,6 @@ class __TwigTemplate_f2234b51a7c1bf767a862e69484492c79e8a99e6ad621cd0d732531810a
 {% block fos_user_content %}
 {% include \"@FOSUser/Group/edit_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "FOSUserBundle:Group:edit.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Group/edit.html.twig");
+", "FOSUserBundle:Group:edit.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/friendsofsymfony/user-bundle/Resources/views/Group/edit.html.twig");
     }
 }

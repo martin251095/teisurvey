@@ -124,6 +124,6 @@ class __TwigTemplate_b8ba2d2ae067c132edd46d341d1ff784d9036b90dc81a64af02a538a198
 
     </div>
 {% endblock %}
-", "@FOSUser/Registration/confirmed.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/bundles/FOSUserBundle/Registration/confirmed.html.twig");
+", "@FOSUser/Registration/confirmed.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/bundles/FOSUserBundle/Registration/confirmed.html.twig");
     }
 }

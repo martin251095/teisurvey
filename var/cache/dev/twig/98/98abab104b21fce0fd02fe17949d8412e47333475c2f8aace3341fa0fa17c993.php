@@ -71,6 +71,6 @@ class __TwigTemplate_53a125f1afc04ae590ce3e5e9169e6ad8199a62e7bd799750b761c9eb16
 <?php else: ?>
 <?php echo \$view['form']->block(\$form, 'choice_widget_collapsed') ?>
 <?php endif ?>
-", "FrameworkBundle:Form:choice_widget.html.php", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/framework-bundle/Resources/views/Form/choice_widget.html.php");
+", "FrameworkBundle:Form:choice_widget.html.php", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/framework-bundle/Resources/views/Form/choice_widget.html.php");
     }
 }

@@ -156,6 +156,6 @@ class __TwigTemplate_7aecf14a8adb60c8089bd77c012d7b3a2f24d2608a0be8bf76b4c6dd03a
     <h2>{{ messages[about].title }}</h2>
     <p>{{ messages[about].message }}</p>
 {% endblock %}
-", "WebProfilerBundle:Profiler:info.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/info.html.twig");
+", "WebProfilerBundle:Profiler:info.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/info.html.twig");
     }
 }

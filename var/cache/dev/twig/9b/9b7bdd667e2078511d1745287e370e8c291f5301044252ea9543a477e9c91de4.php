@@ -69,6 +69,6 @@ class __TwigTemplate_ca1ba89aa76bbde55134c3832da440c9dba8cdf682ce71e5d45b0e32773
     public function getSourceContext()
     {
         return new Source("{{ include('@Twig/Exception/error.xml.twig') }}
-", "TwigBundle:Exception:error.atom.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/error.atom.twig");
+", "TwigBundle:Exception:error.atom.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/error.atom.twig");
     }
 }

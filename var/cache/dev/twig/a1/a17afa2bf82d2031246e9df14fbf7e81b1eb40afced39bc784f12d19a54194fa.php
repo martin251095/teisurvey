@@ -284,6 +284,6 @@ class __TwigTemplate_6ba2d34bf891c386a0de8d4e7120bd4492f3825b805d311c2c71e97633e
     </div>
     </div>
     </div>
-{% endblock %}", "admin/surveyanswer/details.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/surveyanswer/details.html.twig");
+{% endblock %}", "admin/surveyanswer/details.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/surveyanswer/details.html.twig");
     }
 }

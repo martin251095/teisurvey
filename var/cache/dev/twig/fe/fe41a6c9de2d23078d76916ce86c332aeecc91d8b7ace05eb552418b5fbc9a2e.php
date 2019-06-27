@@ -84,6 +84,6 @@ class __TwigTemplate_66cb3dc1e3b56532c9414e692b20007ae65ffdfc5b8ab70f8e70ffb01bd
     {
         return new Source("{% block fos_user_content %}
     {% include \"@FOSUser/Resetting/reset_content.html.twig\" %}
-{% endblock fos_user_content %}", "@FOSUser/Resetting/reset.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/bundles/FOSUserBundle/Resetting/reset.html.twig");
+{% endblock fos_user_content %}", "@FOSUser/Resetting/reset.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/bundles/FOSUserBundle/Resetting/reset.html.twig");
     }
 }

@@ -282,6 +282,6 @@ class __TwigTemplate_a31e44f617abba610c8420b50bded3fd21c88083a62dada0cc3cc1fe143
         {% endblock %}
 
 
-", "admin/home.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/home.html.twig");
+", "admin/home.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/home.html.twig");
     }
 }

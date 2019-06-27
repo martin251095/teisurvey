@@ -77,6 +77,6 @@ class __TwigTemplate_bbd461d132312f31633f2300b0cad2e70c97fbd5dbf86ebf390a676004d
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "FrameworkBundle:Form:choice_attributes.html.php", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
+", "FrameworkBundle:Form:choice_attributes.html.php", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
     }
 }

@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ab23eaf-8375-4059-9670-8e095afe9f07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryTreeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryTreeType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/add.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/add.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category/list.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/75/7571bc76bcc92080ab1229012a77c8b279405077bb2f3efc31976012a08da80e.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/75/7571bc76bcc92080ab1229012a77c8b279405077bb2f3efc31976012a08da80e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/99/99979c166dcddff776be35426e16ce0455dcd6d951bcef98ebdd9f55a5f1c219.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/99/99979c166dcddff776be35426e16ce0455dcd6d951bcef98ebdd9f55a5f1c219.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/b7/b73e5b30a6b349706e57abad85961e1b2dc0823b918dba2e937a4c7a71b77ffd.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/b7/b73e5b30a6b349706e57abad85961e1b2dc0823b918dba2e937a4c7a71b77ffd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
-    </list>
+    <list default="true" id="7ab23eaf-8375-4059-9670-8e095afe9f07" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/public/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +70,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Form/CategoryTreeType.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="116">
+                <state relative-caret-position="390">
                   <caret line="32" column="128" selection-start-line="32" selection-start-column="128" selection-end-line="32" selection-end-column="128" />
                 </state>
               </provider>
@@ -519,16 +508,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561599646004</updated>
-      <workItem from="1561599651273" duration="7274000" />
+      <workItem from="1561599651273" duration="7471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7274000" />
+    <option name="totallyTimeSpent" value="7471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="804" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
@@ -848,7 +836,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/CategoryTreeType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
+        <state relative-caret-position="390">
           <caret line="32" column="128" selection-start-line="32" selection-start-column="128" selection-end-line="32" selection-end-column="128" />
         </state>
       </provider>

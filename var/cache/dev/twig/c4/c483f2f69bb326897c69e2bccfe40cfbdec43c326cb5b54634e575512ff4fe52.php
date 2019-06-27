@@ -55,18 +55,18 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
     ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
+        // line 16
         echo "</head>
 <body>
 ";
-        // line 16
+        // line 18
         $this->displayBlock('nav', $context, $blocks);
-        // line 25
+        // line 27
         echo "
 ";
-        // line 26
+        // line 28
         $this->displayBlock('body', $context, $blocks);
-        // line 29
+        // line 31
         echo "</body>
 </html>
 ";
@@ -116,6 +116,14 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
         // line 12
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/js/app.js"), "html", null, true);
         echo "\"></script>
+        <script src=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/js/survey.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 14
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("build/js/question.js"), "html", null, true);
+        echo "\"></script>
     ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -125,7 +133,7 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
 
     }
 
-    // line 16
+    // line 18
     public function block_nav($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -135,10 +143,10 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "nav"));
 
-        // line 17
+        // line 19
         echo "    <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
         <a class=\"navbar-brand\" href=\"";
-        // line 18
+        // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">MySurvey</a>
         <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarColor02\"
@@ -155,7 +163,7 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
 
     }
 
-    // line 26
+    // line 28
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -165,7 +173,7 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 27
+        // line 29
         echo "
 ";
         
@@ -183,7 +191,7 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
 
     public function getDebugInfo()
     {
-        return array (  169 => 27,  159 => 26,  142 => 18,  139 => 17,  129 => 16,  117 => 12,  110 => 7,  100 => 6,  82 => 5,  70 => 29,  68 => 26,  65 => 25,  63 => 16,  59 => 14,  57 => 6,  53 => 5,  47 => 1,);
+        return array (  177 => 29,  167 => 28,  150 => 20,  147 => 19,  137 => 18,  125 => 14,  121 => 13,  117 => 12,  110 => 7,  100 => 6,  82 => 5,  70 => 31,  68 => 28,  65 => 27,  63 => 18,  59 => 16,  57 => 6,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -200,6 +208,8 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
         <link href=\"https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/superhero/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-LS4/wo5Z/8SLpOLHs0IbuPAGOWTx30XSoZJ8o7WKH0UJhRpjXXTpODOjfVnNjeHu\" crossorigin=\"anonymous\">
         <link rel=\"stylesheet\" href=\"/css/style.css\">
         <script src=\"{{ asset('build/js/app.js') }}\"></script>
+        <script src=\"{{ asset('build/js/survey.js') }}\"></script>
+        <script src=\"{{ asset('build/js/question.js') }}\"></script>
     {% endblock %}
 </head>
 <body>
@@ -218,6 +228,6 @@ class __TwigTemplate_3539b2885fd0e895e22445c674842eee689932326a33f2c378983a4303d
 {% endblock %}
 </body>
 </html>
-", "site/survey/base_thanks.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/site/survey/base_thanks.html.twig");
+", "site/survey/base_thanks.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/site/survey/base_thanks.html.twig");
     }
 }

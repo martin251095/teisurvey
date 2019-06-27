@@ -95,6 +95,6 @@ class __TwigTemplate_85ce8c8b07bc148aa412b0be3db3e1552807b5409e6d362856bfbbe7001
 
 <p>To login with this password follow this link: <a href=\"{{ url('fos_user_security_login') }}\">Login</a></p>
 
-", "email/newadmin.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/email/newadmin.html.twig");
+", "email/newadmin.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/email/newadmin.html.twig");
     }
 }

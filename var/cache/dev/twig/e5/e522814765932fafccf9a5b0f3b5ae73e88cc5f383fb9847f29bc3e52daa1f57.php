@@ -33,7 +33,7 @@ class __TwigTemplate_88d8fd136b589ce991fd4a03b48c3e1f7d7476ce4151abc5905d51de146
     protected function doGetParent(array $context)
     {
         // line 1
-        return "site/survey/base.html.twig";
+        return "site/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_88d8fd136b589ce991fd4a03b48c3e1f7d7476ce4151abc5905d51de146
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "site/survey/thanks.html.twig"));
 
-        $this->parent = $this->loadTemplate("site/survey/base.html.twig", "site/survey/thanks.html.twig", 1);
+        $this->parent = $this->loadTemplate("site/base.html.twig", "site/survey/thanks.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -121,7 +121,7 @@ class __TwigTemplate_88d8fd136b589ce991fd4a03b48c3e1f7d7476ce4151abc5905d51de146
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'site/survey/base.html.twig' %}
+        return new Source("{% extends 'site/base.html.twig' %}
 
 {% block title %}{{ 'survey.title' | trans }}{% endblock %}
 
@@ -134,6 +134,6 @@ class __TwigTemplate_88d8fd136b589ce991fd4a03b48c3e1f7d7476ce4151abc5905d51de146
         </div>
     </div>
 {% endblock %}
-", "site/survey/thanks.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/site/survey/thanks.html.twig");
+", "site/survey/thanks.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/site/survey/thanks.html.twig");
     }
 }

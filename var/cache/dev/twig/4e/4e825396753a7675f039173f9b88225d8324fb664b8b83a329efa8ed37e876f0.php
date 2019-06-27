@@ -145,6 +145,6 @@ class __TwigTemplate_e5285dc2e36826db36dc8a0bcee32e436e8cf6ee165d909ea45844aa8f8
 
 
 
-", "email/quiz.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/email/quiz.html.twig");
+", "email/quiz.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/email/quiz.html.twig");
     }
 }

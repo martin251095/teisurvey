@@ -59,6 +59,6 @@ class __TwigTemplate_27c8e57b7dfa3b3e057e494e23bf72b2a1775430194bc18aaf891940578
 
     public function getSourceContext()
     {
-        return new Source("", "FrameworkBundle:Form:button_label.html.php", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
+        return new Source("", "FrameworkBundle:Form:button_label.html.php", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
     }
 }

@@ -126,23 +126,26 @@ return [
                     .'|quiz(?'
                         .'|answer/([^/]++)/details(*:819)'
                         .'|(?:/(\\d+))?(*:838)'
-                        .'|/([^/]++)(*:855)'
+                        .'|/(?'
+                            .'|create(*:856)'
+                            .'|([^/]++)(*:872)'
+                        .')'
                     .')'
                     .'|thanks(?'
-                        .'|(*:873)'
+                        .'|(*:891)'
                     .')'
                     .'|survey(?'
-                        .'|(?:/(\\d+))?(*:902)'
+                        .'|(?:/(\\d+))?(*:920)'
                         .'|/(?'
-                            .'|create(*:920)'
-                            .'|([^/]++)(*:936)'
+                            .'|create(*:938)'
+                            .'|([^/]++)(*:954)'
                         .')'
                     .')'
                 .')'
-                .'|/(en|fr|nl)?(*:959)'
+                .'|/(en|fr|nl)?(*:977)'
                 .'|/re(?'
-                    .'|setting/reset/([^/]++)(*:995)'
-                    .'|gistration/confirm/([^/]++)(*:1030)'
+                    .'|setting/reset/([^/]++)(*:1013)'
+                    .'|gistration/confirm/([^/]++)(*:1049)'
                 .')'
             .')/?$}sDu',
     ],
@@ -181,17 +184,18 @@ return [
         780 => [[['_route' => 'admin_quizanswer_delete', '_controller' => 'App\\Controller\\Site\\Quiz\\QuizAnswerController::delete'], ['_locale', 'id'], null, null, false, false, null]],
         819 => [[['_route' => 'quizanswer_details', '_controller' => 'App\\Controller\\Site\\Quiz\\QuizAnswerController::detailsfront'], ['_locale', 'id'], null, null, false, false, null]],
         838 => [[['_route' => 'quiz_list', 'page' => '1', '_controller' => 'App\\Controller\\Site\\Quiz\\QuizController::list'], ['_locale', 'page'], null, null, false, true, null]],
-        855 => [[['_route' => 'quiz_show', '_controller' => 'App\\Controller\\Site\\Quiz\\QuizController::show'], ['_locale', 'slug'], null, null, false, true, null]],
-        873 => [
+        856 => [[['_route' => 'quiz_create', '_controller' => 'App\\Controller\\Site\\Quiz\\QuizController::create'], ['_locale'], null, null, false, false, null]],
+        872 => [[['_route' => 'quiz_show', '_controller' => 'App\\Controller\\Site\\Quiz\\QuizController::show'], ['_locale', 'slug'], null, null, false, true, null]],
+        891 => [
             [['_route' => 'quiz_thanks', '_controller' => 'App\\Controller\\Site\\Quiz\\QuizController::thanks'], ['_locale'], null, null, false, false, null],
             [['_route' => 'survey_thanks', '_controller' => 'App\\Controller\\Site\\Survey\\SurveyController::thanks'], ['_locale'], null, null, false, false, null],
         ],
-        902 => [[['_route' => 'survey_list', 'page' => '1', '_controller' => 'App\\Controller\\Site\\Survey\\SurveyController::list'], ['_locale', 'page'], null, null, false, true, null]],
-        920 => [[['_route' => 'survey_create', '_controller' => 'App\\Controller\\Site\\Survey\\SurveyController::create'], ['_locale'], null, null, false, false, null]],
-        936 => [[['_route' => 'survey_show', '_controller' => 'App\\Controller\\Site\\Survey\\SurveyController::show'], ['_locale', 'slug'], null, null, false, true, null]],
-        959 => [[['_route' => 'homepage', '_locale' => 'en', '_controller' => 'App\\Controller\\Site\\Home\\HomeController::home'], ['_locale'], null, null, false, true, null]],
-        995 => [[['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        1030 => [
+        920 => [[['_route' => 'survey_list', 'page' => '1', '_controller' => 'App\\Controller\\Site\\Survey\\SurveyController::list'], ['_locale', 'page'], null, null, false, true, null]],
+        938 => [[['_route' => 'survey_create', '_controller' => 'App\\Controller\\Site\\Survey\\SurveyController::create'], ['_locale'], null, null, false, false, null]],
+        954 => [[['_route' => 'survey_show', '_controller' => 'App\\Controller\\Site\\Survey\\SurveyController::show'], ['_locale', 'slug'], null, null, false, true, null]],
+        977 => [[['_route' => 'homepage', '_locale' => 'en', '_controller' => 'App\\Controller\\Site\\Home\\HomeController::home'], ['_locale'], null, null, false, true, null]],
+        1013 => [[['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        1049 => [
             [['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

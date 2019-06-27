@@ -33,7 +33,7 @@ class __TwigTemplate_34996734634a6c3901236aeb5b3eed1ce02ec2cb282fe78a6a07e404a12
     protected function doGetParent(array $context)
     {
         // line 1
-        return "site/quiz/base.html.twig";
+        return "site/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_34996734634a6c3901236aeb5b3eed1ce02ec2cb282fe78a6a07e404a12
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "site/quiz/thanks.html.twig"));
 
-        $this->parent = $this->loadTemplate("site/quiz/base.html.twig", "site/quiz/thanks.html.twig", 1);
+        $this->parent = $this->loadTemplate("site/base.html.twig", "site/quiz/thanks.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -241,7 +241,7 @@ class __TwigTemplate_34996734634a6c3901236aeb5b3eed1ce02ec2cb282fe78a6a07e404a12
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'site/quiz/base.html.twig' %}
+        return new Source("{% extends 'site/base.html.twig' %}
 
 {% block title %}{{ 'survey.title' | trans }}{% endblock %}
 

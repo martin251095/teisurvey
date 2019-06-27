@@ -84,6 +84,6 @@ class __TwigTemplate_6ded2f76334a433234e16c08fe61f75e203ff4a16370af5424fdf0d2506
     {
         return new Source("{% block fos_user_content %}
     {% include \"@FOSUser/ChangePassword/change_password_content.html.twig\" %}
-{% endblock fos_user_content %}", "@FOSUser/ChangePassword/change_password.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/bundles/FOSUserBundle/ChangePassword/change_password.html.twig");
+{% endblock fos_user_content %}", "@FOSUser/ChangePassword/change_password.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/bundles/FOSUserBundle/ChangePassword/change_password.html.twig");
     }
 }

@@ -95,6 +95,6 @@ class __TwigTemplate_8b2ea2a7eb61608a5588b0ffefb421fbe5b6308bdcb4f1d1ffb56cbf7c8
             </trace>
 {% endfor %}
         </traces>
-", "TwigBundle:Exception:traces.xml.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
+", "TwigBundle:Exception:traces.xml.twig", "/Users/mpo/Documents/TEIFINAL/symfony/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
     }
 }
