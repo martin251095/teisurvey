@@ -26,7 +26,6 @@ final class Version20190627064910 extends AbstractMigration
         $this->addSql('ALTER TABLE quiz_category DROP FOREIGN KEY FK_D088E08412469DE2');
         $this->addSql('ALTER TABLE quiz_category DROP FOREIGN KEY FK_D088E084853CD175');
         $this->addSql('ALTER TABLE quiz_category DROP PRIMARY KEY');
-        $this->addSql('ALTER TABLE quiz_category DROP id, DROP weight');
         $this->addSql('ALTER TABLE quiz_category ADD CONSTRAINT FK_D088E08412469DE2 FOREIGN KEY (category_id) REFERENCES category (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE quiz_category ADD CONSTRAINT FK_D088E084853CD175 FOREIGN KEY (quiz_id) REFERENCES quiz (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE quiz_category ADD PRIMARY KEY (quiz_id, category_id)');
@@ -40,7 +39,6 @@ final class Version20190627064910 extends AbstractMigration
         $this->addSql('ALTER TABLE quiz_category DROP FOREIGN KEY FK_D088E084853CD175');
         $this->addSql('ALTER TABLE quiz_category DROP FOREIGN KEY FK_D088E08412469DE2');
         $this->addSql('ALTER TABLE quiz_category DROP PRIMARY KEY');
-        $this->addSql('ALTER TABLE quiz_category ADD id INT AUTO_INCREMENT NOT NULL, ADD weight INT NOT NULL');
         $this->addSql('ALTER TABLE quiz_category ADD CONSTRAINT FK_D088E084853CD175 FOREIGN KEY (quiz_id) REFERENCES quiz (id)');
         $this->addSql('ALTER TABLE quiz_category ADD CONSTRAINT FK_D088E08412469DE2 FOREIGN KEY (category_id) REFERENCES category (id)');
         $this->addSql('ALTER TABLE quiz_category ADD PRIMARY KEY (id)');
