@@ -180,20 +180,6 @@ class Quiz
         return $this->slug;
     }
 
-  /**
-   * @param QuizCategory $quizCategory
-   */
-  public function removeCategory(QuizCategory $quizCategory)
-  {
-    if (!$this->categories->contains($quizCategory)) {
-      return;
-    }
-
-    $this->categories->removeElement($quizCategory);
-    //needed to update to owning side of the relationship!
-    $quizCategory->setQuiz(null);
-  }
-
     /**
      * @return Collection|QuizAnswer[]
      */
@@ -391,4 +377,13 @@ class Quiz
         return $this;
     }
 
+    public function removeCategory(Category $category): self
+    {
+      if ($this->category->contains($category)) {
+        $this->category->removeElement($category);
+        $category->removeCategory($this);
+      }
+
+      return $this;
+    }
 }
