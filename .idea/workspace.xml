@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ab23eaf-8375-4059-9670-8e095afe9f07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/admin/quizanswer/details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/quizanswer/details.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/quiz/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/quiz/edit.html.twig" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +25,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/admin/quizanswer/details.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+            <state relative-caret-position="127">
+              <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+              <folding>
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/quiz/list.html.twig">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/admin/quiz/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+            <state relative-caret-position="109">
+              <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -151,7 +154,6 @@
         <option value="$PROJECT_DIR$/src/Form/QuizType.php" />
         <option value="$PROJECT_DIR$/src/Controller/Site/Quiz/QuizController.php" />
         <option value="$PROJECT_DIR$/src/Migrations/Version20190627064910.php" />
-        <option value="$PROJECT_DIR$/templates/admin/quiz/edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/home.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/QuizRepository.php" />
         <option value="$PROJECT_DIR$/templates/site/quiz/list.html.twig" />
@@ -159,6 +161,7 @@
         <option value="$PROJECT_DIR$/templates/site/quiz/thanks.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/Quiz.php" />
         <option value="$PROJECT_DIR$/templates/admin/quizanswer/details.html.twig" />
+        <option value="$PROJECT_DIR$/templates/admin/quiz/edit.html.twig" />
       </list>
     </option>
   </component>
@@ -524,12 +527,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561599646004</updated>
       <workItem from="1561599651273" duration="7901000" />
-      <workItem from="1561613334408" duration="5729000" />
+      <workItem from="1561613334408" duration="5895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13630000" />
+    <option name="totallyTimeSpent" value="13796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="804" extended-state="0" />
@@ -786,13 +789,6 @@
         <state relative-caret-position="-132" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/quiz/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="87" column="51" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/UserFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
@@ -877,8 +873,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/quizanswer/details.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        <state relative-caret-position="127">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/quiz/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="87" column="55" selection-start-line="87" selection-start-column="55" selection-end-line="87" selection-end-column="55" />
         </state>
       </provider>
     </entry>
