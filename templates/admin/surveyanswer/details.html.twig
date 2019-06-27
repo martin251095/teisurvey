@@ -1,0 +1,47 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Details of answers{% endblock %}
+
+{% block body %}
+    <h3 class="details_title">Answers of {{ firstname }} {{ lastname }} </h3>
+    <div class="container-fluid">
+        {% for categoryItem in categories %}
+            {% set categoryName = categoryItem.category.name %}
+            {% set categoryScore = score.scoreCategories[categoryItem.id] %}
+            {% set categoryMax = score.maxCategories[categoryItem.id] %}
+
+            <h5 class="category_title">{{ categoryName }} ({{ categoryScore ~ ' / ' ~ categoryMax }})</h5>
+            {% for questionItem in categoryItem.category.questions %}
+                {% set questionName = questionItem.question %}
+                {% set questionScore =  score.scoreQuestions[questionItem.id] %}
+                {% set questionMax = score.maxQuestions[questionItem.id] %}
+
+                <h6 class="question_statement">{{ questionName }} ({{ questionScore ~ ' / ' ~ questionMax }}):</h6>
+                <div class="text_info">Answers of the user :</div>
+                <ul class="answer_statement">
+                    {% if data[categoryItem.category.id]['questions'][questionItem.id] is defined %}
+                        {% for answer in data[categoryItem.category.id]['questions'][questionItem.id].answers %}
+                            <li style="color:{{ answer.getIsCorrect() ? 'green' : 'red' }}">
+                                {{ answer.answer }}
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <div style="color:red">{{ 'The user did not answered this question'|trans }}</div>
+                    {% endif %}
+                </ul>
+                <div class="text_info">Correct answers :</div>
+                <ul class="answer_statement">
+                    {% for answer in questionItem.answers %}
+                        {% if answer.isCorrect %}
+                            <li>
+                                {{ answer.answer }}
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    </div>
+    </div>
+{% endblock %}

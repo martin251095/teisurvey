@@ -1,0 +1,49 @@
+# template quiz/thanks.html.twig
+survey.title: 'Enquête'
+survey.thanks.title: 'Bedankt'
+survey.thanks.text: 'Bedankt dat u de tijd heeft genomen om de enquête te beantwoorden.'
+survey.thanks.next_step: 'We houden u op de hoogte van uw resultaten.'
+
+# template quiz/index.html.twig
+language.text: 'Taal'
+
+firstname.label: 'Voornaam'
+lastname.label: 'Naam'
+email.label: 'E-mailadres'
+
+# template email/quiz.html.twig
+title.text_1: 'Resultaten van'
+title.text_2: 'op de vragenlijst'
+
+p1.text_1: 'scoorde'
+p1.text_2: 'van de'
+p1.text_3: 'op de vragenlijst'
+
+p2.text_1: 'Het percentage is daarom'
+
+p3.text_1: 'De vragenlijst was in het'
+
+p4.text_1: 'Klik op deze link om de lijst met verschillende antwoorden te bekijken:'
+p4.text_2: 'Lijst met antwoorden'
+
+p5.text_1: 'E-mailadres van gebruiker'
+
+# template site/survey/list.html.twig
+page.survey.title: 'Alle enquêtes'
+
+# template site/survey/list.html.twig
+page.quiz.title: 'Alle quizzen'
+
+
+# registration
+registration.submit: 'Inschrijven'
+
+# nav
+homepage.text: 'Startpagina'
+list.surveys: 'Lijst met enquêtes'
+list.quizzes: 'Lijst met quizzen'
+contact.text: 'Contact'
+account.text: 'Mijn account'
+logout.text: 'Uitloggen'
+creation.survey: 'Maak een enquête'
+creation.quiz: 'Maak een quiz'

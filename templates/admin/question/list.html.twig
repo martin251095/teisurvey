@@ -1,0 +1,45 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Questions{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <tr class="text-center">
+                <th>Id</th>
+                <th>Category</th>
+                <th>Statement</th>
+                <th>Weight</th>
+                <th>Points</th>
+                <th>Created</th>
+                <th>Updated</th>
+                <th>Action</th>
+            </tr>
+            {% for question in pagination.data %}
+                {% set confirm = 'return confirm("Are you sure you want to delete the question ?");' %}
+
+                <tr class="text-center">
+                    <td>{{ question.id }}</td>
+                    <td>{{ question.category.name }}</td>
+                    <td>{{ question.question }}</td>
+                    <td>{{ question.weight }}</td>
+                    <td>{{ question.point }}</td>
+                    <td>{{ question.createdAt|date('Y-m-d') }}</td>
+                    <td>{{ question.updatedAt|date('Y-m-d') }}</td>
+                    <td>
+                        <a href="{{ path('admin_question_edit',{'id':question.id}) }}" class="btn btn-primary"><i
+                                    class="fas fa-edit"></i></a>
+                        <a href="{{ path('admin_question_delete',{'id':question.id}) }}" onclick="{{ confirm }}" class="btn btn-danger"><i
+                                    class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        {{ pagination.display() }}
+        {# include 'admin/partials/pagination.html.twig' with {'route':'admin_question_list'} #}
+
+        <div class="button">
+            <a href="{{ path('admin_question_add') }}" class="btn btn-primary btn-admin">Add question</a>
+        </div>
+    </div>
+{% endblock %}

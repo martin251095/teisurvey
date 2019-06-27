@@ -1,0 +1,48 @@
+# template site/quiz/thanks.html.twig
+survey.title: 'Survey'
+survey.thanks.title: 'Thanks'
+survey.thanks.text: 'Thank you for taking the time to answer the survey.'
+survey.thanks.next_step: 'We will keep you informed of your results.'
+
+# template site/quiz/index.html.twig
+language.text: 'Language'
+
+firstname.label: 'First name'
+lastname.label: 'Last name'
+email.label: 'Email'
+
+# template email/quiz.html.twig
+title.text_1: 'Results of'
+title.text_2: 'on the survey'
+
+p1.text_1: 'scored'
+p1.text_2: 'out of'
+p1.text_3: 'on the survey'
+
+p2.text_1: 'Its percentage is therefore'
+
+p3.text_1: 'The survey was answered in'
+
+p4.text_1: 'To see the list of different answers, follow this link:'
+p4.text_2: 'List of answers'
+
+p5.text_1: 'User''s email'
+
+# template site/survey/list.html.twig
+page.survey.title: 'All the surveys'
+
+# template site/survey/list.html.twig
+page.quiz.title: 'All the quizzes'
+
+# template registration
+registration.submit: 'Register'
+
+# nav
+homepage.text: 'Homepage'
+list.surveys: 'List of surveys'
+list.quizzes: 'List of quizzes'
+contact.text: 'Contact'
+account.text: 'My account'
+logout.text: 'Log out'
+creation.survey: 'Create a survey'
+creation.quiz: 'Create a quiz'

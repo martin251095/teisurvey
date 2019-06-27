@@ -1,0 +1,64 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Answers{% endblock %}
+
+{% form_theme form _self %}
+
+{% block body %}
+    <script>
+        function validateForm() {
+            let locale = null;
+            let upperLocale = null;
+            let b = null;
+            {% for locale in locales %}
+            {% if locale == 'en' %}
+            let a = document.forms["answer"]["answer[answer]"].value;
+            let c = document.forms["answer"]["answer[point]"].value;
+            let d = document.forms["answer"]["answer[question]"].value;
+            if (a == null || a==="" || c == null || c==="" || d == null || d==="") {
+                alert("Please fill all required field, don't forget the translations into the tabs");
+                return false;
+            }
+            {% else %}
+            locale = '{{ locale }}';
+            upperLocale = locale.charAt(0).toUpperCase() + locale.slice(1);
+            b = document.forms["answer"]["answer[answer" + upperLocale + "]"].value;
+            if (b==null || b==="") {
+                alert("Please fill all required field, don't forget the translations into the tabs");
+                return false;
+            }
+            {% endif %}
+            {% endfor %}
+        }
+    </script>
+    <div class="container">
+        <h3 class="admin-h3">Edit the answer</h3>
+        {{ form_start(form, {'attr': { 'onsubmit' : 'return validateForm()'}}) }}
+        <div class="nav nav-tabs nav-tab-admin" id="nav-tab" role="tablist">
+            {% for locale in locales %}
+                {% set active = locale == 'en' ? 'active' : '' %}
+                {% set selected = locale == 'en' ? 'true' : 'false' %}
+                <a class="nav-item nav-link {{ active }}" id="nav-{{ locale }}-tab" data-toggle="tab" href="#nav-{{ locale }}" role="tab"
+                   aria-controls="nav-{{ locale }}" aria-selected="{{ selected }}">{{ locale|upper }}</a>
+            {% endfor %}
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+            {% for locale in locales %}
+                {% set active = locale == 'en' ? 'show active' : '' %}
+                <div class="tab-pane fade {{ active }}" id="nav-{{ locale }}" role="tabpanel" aria-labelledby="nav-{{ locale }}-tab">
+                    {% if locale == 'en' %}
+                        {{ form_row(form.answer) }}
+                        {{ form_row(form.isCorrect) }}
+                        {{ form_row(form.point) }}
+                        {{ form_row(form.weight) }}
+                        {{ form_row(form.question) }}
+                    {% else %}
+                        {{ form_row(attribute(form, 'answer' ~ locale|capitalize)) }}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i>Edit</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

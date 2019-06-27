@@ -1,0 +1,120 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Surveys{% endblock %}
+
+{% form_theme form _self %}
+
+{% block body %}
+    <script>
+        function validateForm() {
+            let locale = null;
+            let upperLocale = null;
+            let b = null;
+            let f =null;
+            {% for locale in locales %}
+            {% if locale == 'en' %}
+            let a = document.forms["quiz"]["quiz[title]"].value;
+            let c = document.forms["quiz"]["quiz[sendingEmail]"].value;
+            let d = document.forms["quiz"]["quiz[sendingEmailLanguage]"].value;
+            let e = document.forms["quiz"]["quiz[description]"].value;
+            if (a == null || a === "" || c == null || c === "" || d == null || d === "" || e == null || e === "") {
+                alert("Please fill all required field, don't forget the translations into the tabs");
+                return false;
+            }
+            {% else %}
+            locale = '{{ locale }}';
+            upperLocale = locale.charAt(0).toUpperCase() + locale.slice(1);
+            b = document.forms["quiz"]["quiz[title" + upperLocale + "]"].value;
+            f = document.forms["quiz"]["quiz[description" + upperLocale + "]"].value;
+            if (b == null || b === "" || f == null || f === "") {
+                alert("Please fill all required field, don't forget the translations into the tabs");
+                return false;
+            }
+            {% endif %}
+            {% endfor %}
+        }
+
+        jQuery(document).ready(function () {
+            var $wrapper = $('.js-quiz-category-wrapper');
+            $wrapper.on('click', '.js-remove-quiz-category', function(e) {
+                e.preventDefault();
+                $(this).closest('.js-quiz-category-item')
+                    .fadeOut()
+                    .remove();
+            });
+
+            $wrapper.on('click', '.js-quiz-category-add',function(e) {
+                e.preventDefault();
+
+                // Get the data-prototype
+                var prototype = $wrapper.data('prototype');
+
+                // Get the new index
+                var index = $wrapper.data('index');
+
+                // Replace '__name__' in the prototype's HTML to
+                // instead be a number based on how many items we have
+                var newForm = prototype.replace(/__name__/g, index);
+
+                // Increase the index with one for the next item
+                $wrapper.data('index', index+1);
+
+                // Display the form in the page before the "new" link
+                $(this).before(newForm);
+            });
+        });
+    </script>
+
+    <div class="container">
+        <h3 class="admin-h3">Add new quiz</h3>
+        {{ form_start(form, {'attr': { 'onsubmit' : 'return validateForm()'}}) }}
+        <div class="nav nav-tabs nav-tab-admin" id="nav-tab" role="tablist">
+            {% for locale in locales %}
+                {% set active = locale == 'en' ? 'active' : '' %}
+                {% set selected = locale == 'en' ? 'true' : 'false' %}
+                <a class="nav-item nav-link {{ active }}" id="nav-{{ locale }}-tab" data-toggle="tab"
+                   href="#nav-{{ locale }}" role="tab"
+                   aria-controls="nav-{{ locale }}" aria-selected="{{ selected }}">{{ locale|upper }}</a>
+            {% endfor %}
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+            {% for locale in locales %}
+                {% set active = locale == 'en' ? 'show active' : '' %}
+                <div class="tab-pane fade {{ active }}" id="nav-{{ locale }}" role="tabpanel"
+                     aria-labelledby="nav-{{ locale }}-tab">
+                    {% if locale == 'en' %}
+                        {{ form_row(form.title) }}
+                        {{ form_row(form.description) }}
+                        <div class="title_survey_admin">Categories</div>
+                        <div class="row js-quiz-category-wrapper"
+                             data-prototype="{{ form_widget(form.categories.vars.prototype)|e('html_attr') }}"
+                             data-index="{{ form.categories|length }}">
+                            {% for surveyCategoryForm in form.categories %}
+                                <div class="col-xs-4 js-quiz-category-item">
+                                    {{ form_errors(surveyCategoryForm) }}
+                                    {{ form_row(surveyCategoryForm.category) }}
+                                    {{ form_row(surveyCategoryForm.weight) }}
+                                    <a href="#" class="js-remove-quiz-category pull-right">
+                                        <span class="fa fa-close"></span>
+                                        Delete
+                                    </a>
+                                </div>
+                            {% endfor %}
+                            <a href="#" class="js-quiz-category-add">
+                                <span class="fa fa-plus-circle"></span>
+                                Add Another Category
+                            </a>
+                        </div>
+                        {{ form_row(form.sendingEmail) }}
+                        {{ form_row(form.sendingEmailLanguage) }}
+                    {% else %}
+                        {{ form_row(attribute(form, 'title' ~ locale|capitalize)) }}
+                        {{ form_row(attribute(form, 'description' ~ locale|capitalize)) }}
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i>Create</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

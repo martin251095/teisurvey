@@ -1,0 +1,30 @@
+{% extends 'site/survey/base.html.twig' %}
+
+{% block title %}{{ survey.title }}{% endblock %}
+
+{% block body %}
+
+    <!-- Front of the survey is improvable -->
+
+    <div class="surveytitle">
+        <h1>{{ survey.title }}</h1>
+    </div>
+
+    {{ form_start(form) }}
+        {{ form_row(form.userFirstname) }}
+        {{ form_row(form.userLastname) }}
+        {{ form_row(form.userEmail) }}
+
+        {% for category in formData %}
+            <h4 class="survey_categories">{{ category.name }}</h4>
+            {% for key, question in category.questions %}
+                <div class="survey_questions">{{ form_label(attribute(form, 'question_' ~ key)) }}</div>
+                <blockquote class="survey_long_questions">{{ question|raw }}</blockquote>
+                {{ form_widget(attribute(form, 'question_' ~ key)) }}
+            {% endfor %}
+        {% endfor %}
+
+    {{ form_end(form) }}
+
+{% endblock %}
+

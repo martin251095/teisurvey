@@ -1,0 +1,318 @@
+/* config base */
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+/* template admin/ */
+
+.connectionbox {
+    margin-top: 25%;
+}
+
+.tableautitle {
+    text-align: center;
+}
+
+.tableaucontent {
+    text-align: center;
+}
+
+.detailsanswer {
+    margin-left: 75px;
+}
+
+.detailsquestion {
+    margin-top: 15px;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.nav-item {
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 15px;
+}
+
+.admin-h3 {
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.nav-tab-admin {
+    margin-bottom: 20px;
+}
+
+.btn-admin {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#survey_categories {
+    margin-left: 50px;
+}
+
+#question_category {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(0,0,0,.1);
+}
+
+/* si => expanded: true, multiple: false => car problèmes sur mozilla sur grand écran */
+#category_tree_parent {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(0,0,0,.1);
+}
+
+.js-survey-category-wrapper {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(0,0,0,.1);
+}
+
+.js-survey-category-item {
+    margin-bottom: 20px;
+}
+
+.title_survey_admin {
+    margin-left: 15px;
+}
+
+
+.js-quiz-category-wrapper {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(0,0,0,.1);
+}
+
+.js-quiz-category-item {
+    margin-bottom: 20px;
+}
+
+.title_quiz_admin {
+    margin-left: 15px;
+}
+
+/*.js-survey-category-add {*/
+    /*margin-top: 50%;*/
+/*}*/
+
+
+/* template admin/surveyanswer/details.html/twig */
+
+.details_title {
+    margin-left: 20px;
+    margin-top: 25px;
+    text-decoration: underline double;
+}
+
+.category_title {
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.question_statement {
+    margin-left: 110px;
+    margin-bottom: 10px;
+}
+
+.text_info {
+    margin-left: 150px;
+    margin-bottom: 5px;
+    text-decoration: underline wavy;
+}
+
+.answer_statement {
+    margin-left: 170px;
+}
+
+
+/* template bundles/TwigBundle/Exception/error404.html.twig */
+
+.error-404 {
+    margin-top: 50%;
+}
+
+.error-text-top {
+    font-size: 10px;
+    font-family: Futura;
+}
+
+.error-text-center {
+    font-size: 70px;
+    font-family: Futura;
+
+}
+
+.error-text-bottom {
+    font-size: 15px;
+    font-family: Futura;
+}
+
+
+/* template bundles/FOSUserBundle/Resetting/request_content.html.twig */
+
+.title_request {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.email_request {
+    margin-left: 10px;
+}
+
+.input_request {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* template bundles/FOSUserBundle/Resetting/reset_content.html.twig */
+
+.title_reset {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form_reset {
+    margin-left: 10px;
+}
+
+.input_reset {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* template bundles/FOSUserBundle/ChangePassword/change_password_content.html.twig */
+
+.title_change {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form_change {
+    margin-left: 10px;
+}
+
+.input_change {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* template quiz/index.html.twig */
+
+.quiztitle {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: double underline;
+}
+
+.form-group {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.quiz_categories{
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.quiz_questions {
+    margin-left: 70px;
+    margin-bottom: 5px;
+}
+
+.quiz_long_questions {
+    margin-left: 130px;
+    font-size: 16px;
+}
+
+.answer {
+    margin-left: 130px;
+    margin-bottom: 23px;
+    font-size: 14px;
+}
+
+
+/* template survey/index.html.twig */
+
+.surveytitle {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-decoration: double underline;
+}
+
+.form-group {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.survey_categories{
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.survey_questions {
+    margin-left: 70px;
+    margin-bottom: 5px;
+}
+
+.survey_long_questions {
+    margin-left: 130px;
+    font-size: 16px;
+}
+
+.answer {
+    margin-left: 130px;
+    margin-bottom: 23px;
+    font-size: 14px;
+}
+
+/* template quiz/thanks.html.twig */
+
+.thanks {
+    margin-top: 25%;
+}
+
+

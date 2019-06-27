@@ -1,0 +1,14 @@
+<h3>{{ 'title.text_1' | trans({}, "messages", data.emailLang) }} {{ data.userFirstname }} {{ data.userLastname }} {{ 'title.text_2' | trans({}, "messages", data.emailLang) }} {{ data.survey }}</h3>
+
+<p>{{ data.userFirstname }}  {{ data.userLastname }} {{ 'p1.text_1' | trans({}, "messages", data.emailLang) }} {{ data.score }} {{ 'p1.text_2' | trans({}, "messages", data.emailLang) }} {{ data.total }} {{ 'p1.text_3' | trans({}, "messages", data.emailLang) }}
+    "{{ data.survey }}"</p>
+<p>{{ 'p2.text_1' | trans({}, "messages", data.emailLang) }} {{ data.pourcent|number_format(2, '.', '') }}%</p>
+<p>{{ 'p3.text_1' | trans({}, "messages", data.emailLang) }} {{ data.language }}</p>
+<p>{{ 'p4.text_1' | trans({}, "messages", data.emailLang) }} <a
+            href="{{ url('admin_surveyanswer_details', { 'id':data.id }) }}">{{ 'p4.text_2' | trans({}, "messages", data.emailLang) }}</a>
+</p>
+<p>{{ 'p5.text_1' | trans({}, "messages", data.emailLang) }} {{ data.userEmail }}</p>
+
+
+
+

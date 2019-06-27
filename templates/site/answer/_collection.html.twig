@@ -1,0 +1,32 @@
+{% block _survey_questionSurveys_answers_widget %}
+    <p>Add an answer</p>
+    {{ form_widget(form) }}
+    <input type="hidden" id="widgets-counter-2" value="0">
+
+{% endblock %}
+
+{% block _survey_questionSurveys_answers_entry_row %}
+    {{ form_widget(form) }}
+{% endblock %}
+
+{% block _survey_questionSurveys_answers_entry_widget %}
+    <div class="form-group" id="block_{{ id }}">
+        <div class="row">
+            <div class="col-10">
+                <div class="row">
+                    <div class="col">
+                        {{ form_widget(form.answer) }}
+                        {{ form_errors(form.answer) }}
+                        {{ form_widget(form.answerFr) }}
+                        {{ form_errors(form.answerFr) }}
+                        {{ form_widget(form.answerNl) }}
+                        {{ form_errors(form.answerNl) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" data-action="delete" data-target="#block_{{ id }}" class="btn btn-danger">X</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

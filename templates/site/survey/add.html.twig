@@ -1,0 +1,39 @@
+{% extends 'site/survey/base.html.twig' %}
+
+{% form_theme form 'site/question/_collection.html.twig' %}
+{% block body %}
+
+    <div class="container">
+        <h3 class="my-5">Create a survey</h3>
+        {{ form_start(form) }}
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-light">
+                    {{ form_row(form.title) }}
+                    {{ form_row(form.titleFr) }}
+                    {{ form_row(form.titleNl) }}
+                    {{ form_row(form.description) }}
+                    {{ form_row(form.descriptionFr) }}
+                    {{ form_row(form.descriptionNl) }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-light">
+                    <h4>Questions of the survey</h4>
+                    <hr>
+                    {{ form_row(form.questionSurveys) }}
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary float-right"><i class="fas fa-check"></i>Add the survey</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/js/survey.js') }}"></script>
+{% endblock %}

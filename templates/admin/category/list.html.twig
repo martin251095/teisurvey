@@ -1,0 +1,37 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}Categories{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <table class="table table-hover">
+            <tr class="text-center">
+                <th>Title</th>
+                <th>Parent</th>
+                <th>Updated</th>
+                <th>Action</th>
+            </tr>
+            {% for category in pagination.data %}
+                {% set confirm = 'return confirm("Are you sure you want to delete the category ?");' %}
+
+                <tr class="text-center">
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.parent ? category.parent.name : '' }}</td>
+                    <td>{{ category.updatedAt|date('Y-m-d') }}</td>
+                    <td>
+                        <a href="{{ path('admin_category_edit',{'id':category.id}) }}" class="btn btn-primary"><i
+                                    class="fas fa-edit"></i></a>
+                        <a href="{{ path('admin_category_delete',{'id':category.id}) }}" onclick="{{ confirm }}" class="btn btn-danger"><i
+                                    class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        {{ pagination.display() }}
+        {# include 'admin/partials/pagination.html.twig' with {'route':'admin_category_list'} #}
+
+        <div class="button">
+            <a href="{{ path('admin_category_add') }}" class="btn btn-primary btn-admin">Add category</a>
+        </div>
+    </div>
+{% endblock %}

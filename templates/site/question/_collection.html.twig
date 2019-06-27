@@ -1,0 +1,54 @@
+{% block _survey_questionSurveys_widget %}
+    <p>Add a question</p>
+    {{ form_widget(form) }}
+    <input type="hidden" id="widgets-counter" value="0">
+    <div class="form-group"><button type="button" id="add_question" class="btn btn-primary"><i class="fas fa-plus"></i>Add a question</button></div>
+{% endblock %}
+
+{% block _survey_questionSurveys_entry_row %}
+    {{ form_widget(form) }}
+{% endblock %}
+
+{% form_theme form 'site/answer/_collection.html.twig' %}
+
+{% block _survey_questionSurveys_entry_widget %}
+    <div class="form-group" id="block_{{ id }}">
+        <div class="row">
+            <div class="col-10">
+                <div class="row">
+                    <div class="col">
+                        {{ form_widget(form.question) }}
+                        {{ form_errors(form.question) }}
+                        {{ form_widget(form.longQuestion) }}
+                        {{ form_errors(form.longQuestion) }}<br/>
+                        {{ form_widget(form.questionFr) }}
+                        {{ form_errors(form.questionFr) }}
+                        {{ form_widget(form.longQuestionFr) }}
+                        {{ form_errors(form.longQuestionFr) }}<br/>
+                        {{ form_widget(form.questionNl) }}
+                        {{ form_errors(form.questionNl) }}
+                        {{ form_widget(form.longQuestionNl) }}
+                        {{ form_errors(form.longQuestionNl) }}<br/>
+                        {{ form_widget(form.weight) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-light">
+                        <h4>Answers of the question</h4>
+                        <hr>
+                        {{ form_row(form.answers) }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="button" data-action="delete" data-target="#block_{{ id }}" class="btn btn-danger">X</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/js/question.js') }}"></script>
+{% endblock %}

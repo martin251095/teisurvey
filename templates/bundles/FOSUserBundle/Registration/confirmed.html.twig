@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">&nbsp;</div>
+            <div class="col-md-6">
+                <div class="bg-light py-3 px-3 connectionbox">
+                    <h2 class="title_request">Create Account</h2>
+                        <p class="text-confirmed-registration">Your account has been created !</p>
+                        <a href="{{ path('home') }}" class="link-confirmed-registration">Go to homepage</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

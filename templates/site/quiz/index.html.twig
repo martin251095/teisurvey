@@ -1,0 +1,30 @@
+{% extends 'site/quiz/base.html.twig' %}
+
+{% block title %}{{ quiz.title }}{% endblock %}
+
+{% block body %}
+
+    <!-- Front of the quiz is improvable -->
+
+    <div class="quiztitle">
+        <h1>{{ quiz.title }}</h1>
+    </div>
+
+    {{ form_start(form) }}
+        {{ form_row(form.userFirstname) }}
+        {{ form_row(form.userLastname) }}
+        {{ form_row(form.userEmail) }}
+
+        {% for category in formData %}
+            <h4 class="quiz_categories">{{ category.name }}</h4>
+            {% for key, question in category.questions %}
+                <div class="quiz_questions">{{ form_label(attribute(form, 'question_' ~ key)) }}</div>
+                <blockquote class="quiz_long_questions">{{ question|raw }}</blockquote>
+                {{ form_widget(attribute(form, 'question_' ~ key)) }}
+            {% endfor %}
+        {% endfor %}
+
+    {{ form_end(form) }}
+
+{% endblock %}
+

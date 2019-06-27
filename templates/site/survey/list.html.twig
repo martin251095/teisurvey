@@ -1,0 +1,32 @@
+{% extends 'site/survey/base.html.twig' %}
+
+{% block title %}Surveys{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <h3 class="my-5">{{ 'page.survey.title' | trans() }}</h3>
+        <div class="offset-1 col-10">
+            <div class="row">
+                {% for surveys in pagination.data %}
+                    <div class="col-6">
+                        <div class="card bg-light mb-3">
+                            <div class="card-header text-center">
+                                {{ surveys.title }}
+                            </div>
+                            <div class="card-body">
+                                <p>{{ surveys.description }}</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="{{ path('survey_show',{'slug':surveys.slug}) }}" class="btn btn-warning">Répondre</a>
+                            </div>
+                        </div>
+
+                    </div>
+                {% endfor %}
+                {{ pagination.display() }}
+                {# include 'partials/pagination.html.twig' with {'route':'surveys'} #}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

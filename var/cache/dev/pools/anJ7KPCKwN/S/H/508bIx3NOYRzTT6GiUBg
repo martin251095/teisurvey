@@ -1,0 +1,31 @@
+<?php return [PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Table'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Table')),
+            clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+            clone ($p['Gedmo\\Mapping\\Annotation\\TranslationEntity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Gedmo\\Mapping\\Annotation\\TranslationEntity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
+                    'survey',
+                ],
+                'repositoryClass' => [
+                    1 => 'App\\Repository\\SurveyRepository',
+                ],
+                'class' => [
+                    2 => 'App\\Entity\\Translation\\SurveyTranslation',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+            $o[1],
+            $o[2],
+        ],
+        []
+    );
+
+}];

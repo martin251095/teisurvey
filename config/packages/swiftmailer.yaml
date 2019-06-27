@@ -1,0 +1,13 @@
+swiftmailer:
+    default_mailer: default
+    mailers:
+        default:
+            host: 'mailhog'
+            port: '1025'
+            spool:
+                type: 'memory'
+                path: "%kernel.root_dir%/../bin/mailer/spool/"
+
+parameters:
+    default_to: 'martin@gmail.com'
+    default_from: 'mysurvey@info.com'

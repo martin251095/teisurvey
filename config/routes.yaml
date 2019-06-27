@@ -1,0 +1,16 @@
+homepage:
+  path: /{_locale}
+  controller: App\Controller\Site\Home\HomeController::home
+  prefix: /
+  defaults:
+    _locale: en
+  requirements:
+    _locale: en|fr|nl
+fos_user:
+  resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+fos_user_resetting:
+  resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+  prefix: /resetting
+fos_user_registration:
+  resource : "@FOSUserBundle/Resources/config/routing/registration.xml"
+  prefix: /registration

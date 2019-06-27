@@ -1,0 +1,9 @@
+<h3>Connection information</h3>
+
+<p>{{ data.username }}, here is your password: {{ data.password }}  </p>
+
+<p>To change this password follow this link: <a href="{{ url('fos_user_change_password') }}">Change your password</a>.
+    First, login and then change your password.</p>
+
+<p>To login with this password follow this link: <a href="{{ url('fos_user_security_login') }}">Login</a></p>
+

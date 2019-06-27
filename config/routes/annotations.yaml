@@ -1,0 +1,14 @@
+controllers:
+    resource: ../../src/Controller
+    type: annotation
+
+admin:
+    resource: ../../src/Controller/Admin
+    type: annotation
+
+survey:
+    resource: ../../src/Controller/Site
+    type: annotation
+    prefix: /{_locale}
+    requirements:
+        _locale: '%locale%|%translatable_locales%'
