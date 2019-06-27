@@ -6,7 +6,7 @@
     <h3 class="details_title">Answers of {{ firstname }} {{ lastname }} </h3>
     <div class="container-fluid">
         {% for categoryItem in categories %}
-            {% set categoryName = categoryItem.category.name %}
+            {% set categoryName = categoryItem.name %}
             {% set categoryScore = score.scoreCategories[categoryItem.id] %}
             {% set categoryMax = score.maxCategories[categoryItem.id] %}
 
