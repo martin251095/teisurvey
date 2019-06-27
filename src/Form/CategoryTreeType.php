@@ -30,31 +30,7 @@ class CategoryTreeType extends ApplicationType
         $builder
           ->add('name', TextType::class, $this->getConfiguration('Name', 'Category Name'))
           ->add('nameFr', TextType::class, $this->getConfiguration('Name FR', 'Category Name in French', ['required' => false]))
-          ->add('nameNl', TextType::class, $this->getConfiguration('Name NL', 'Category Name in Dutch', ['required' => false]))
-          ->add(
-            'parent',
-            EntityType::class,
-            [
-              'label' => 'Parent Category',
-              'required' => false,
-              'class' => Category::class,
-              'query_builder' => function (EntityRepository $er) {
-                  return $er
-                    ->createQueryBuilder('node')
-                    ->addOrderBy('node.root', 'ASC')
-                    ->addOrderBy('node.lft', 'ASC');
-              },
-              'expanded' => false,
-              'multiple' => false,
-              'choice_label' => function (Category $category) {
-
-                  $prefix = str_repeat('-', $category->getLvl());
-
-                  return $prefix.' '.$category->getName();
-              },
-
-            ]
-          );
+          ->add('nameNl', TextType::class, $this->getConfiguration('Name NL', 'Category Name in Dutch', ['required' => false]));
     }
 
     /**

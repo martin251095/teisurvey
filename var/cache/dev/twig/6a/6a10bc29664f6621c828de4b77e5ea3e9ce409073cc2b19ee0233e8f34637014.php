@@ -195,31 +195,27 @@ class __TwigTemplate_db5ee14add5b5b46be33852b5873905cd9d46dbf6735935d0e36c10ac0c
                 echo "                        ";
                 echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), "name", [], "any", false, false, false, 48), 'row');
                 echo "
-                        ";
-                // line 49
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 49, $this->source); })()), "parent", [], "any", false, false, false, 49), 'row');
-                echo "
                     ";
             } else {
-                // line 51
+                // line 50
                 echo "                        ";
-                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 51, $this->source); })()), ("name" . twig_capitalize_string_filter($this->env, $context["locale"])), [], "any", false, false, false, 51), 'row');
+                echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), ("name" . twig_capitalize_string_filter($this->env, $context["locale"])), [], "any", false, false, false, 50), 'row');
                 echo "
                     ";
             }
-            // line 53
+            // line 52
             echo "                </div>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['locale'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 54
         echo "        </div>
         <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fas fa-check\"></i>Create</button>
         ";
-        // line 57
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 57, $this->source); })()), 'form_end');
+        // line 56
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 56, $this->source); })()), 'form_end');
         echo "
     </div>
 ";
@@ -243,7 +239,7 @@ class __TwigTemplate_db5ee14add5b5b46be33852b5873905cd9d46dbf6735935d0e36c10ac0c
 
     public function getDebugInfo()
     {
-        return array (  222 => 57,  218 => 55,  211 => 53,  205 => 51,  200 => 49,  195 => 48,  193 => 47,  184 => 46,  181 => 45,  177 => 44,  173 => 42,  161 => 40,  152 => 39,  149 => 38,  146 => 37,  142 => 36,  137 => 34,  131 => 30,  125 => 29,  113 => 21,  105 => 15,  102 => 14,  98 => 13,  91 => 8,  81 => 7,  62 => 3,  51 => 1,  49 => 5,  36 => 1,);
+        return array (  218 => 56,  214 => 54,  207 => 52,  201 => 50,  195 => 48,  193 => 47,  184 => 46,  181 => 45,  177 => 44,  173 => 42,  161 => 40,  152 => 39,  149 => 38,  146 => 37,  142 => 36,  137 => 34,  131 => 30,  125 => 29,  113 => 21,  105 => 15,  102 => 14,  98 => 13,  91 => 8,  81 => 7,  62 => 3,  51 => 1,  49 => 5,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -296,7 +292,6 @@ class __TwigTemplate_db5ee14add5b5b46be33852b5873905cd9d46dbf6735935d0e36c10ac0c
                 <div class=\"tab-pane fade {{ active }}\" id=\"nav-{{ locale }}\" role=\"tabpanel\" aria-labelledby=\"nav-{{ locale }}-tab\">
                     {% if locale == 'en' %}
                         {{ form_row(form.name) }}
-                        {{ form_row(form.parent) }}
                     {% else %}
                         {{ form_row(attribute(form, 'name' ~ locale|capitalize)) }}
                     {% endif %}
@@ -306,6 +301,7 @@ class __TwigTemplate_db5ee14add5b5b46be33852b5873905cd9d46dbf6735935d0e36c10ac0c
         <button type=\"submit\" class=\"btn btn-primary\"><i class=\"fas fa-check\"></i>Create</button>
         {{ form_end(form) }}
     </div>
-{% endblock %}", "admin/category/add.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/category/add.html.twig");
+{% endblock %}
+", "admin/category/add.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/category/add.html.twig");
     }
 }

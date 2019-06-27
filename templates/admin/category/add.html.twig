@@ -46,7 +46,6 @@
                 <div class="tab-pane fade {{ active }}" id="nav-{{ locale }}" role="tabpanel" aria-labelledby="nav-{{ locale }}-tab">
                     {% if locale == 'en' %}
                         {{ form_row(form.name) }}
-                        {{ form_row(form.parent) }}
                     {% else %}
                         {{ form_row(attribute(form, 'name' ~ locale|capitalize)) }}
                     {% endif %}

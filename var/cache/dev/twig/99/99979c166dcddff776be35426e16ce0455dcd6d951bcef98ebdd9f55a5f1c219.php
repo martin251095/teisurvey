@@ -89,44 +89,39 @@ class __TwigTemplate_db4b97f311e9b89a62b202a84c96c0e8a38b4d1a38f07dd3456cf3bc830
         <table class=\"table table-hover\">
             <tr class=\"text-center\">
                 <th>Title</th>
-                <th>Parent</th>
                 <th>Updated</th>
                 <th>Action</th>
             </tr>
             ";
-        // line 14
+        // line 13
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 14, $this->source); })()), "data", [], "any", false, false, false, 14));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 13, $this->source); })()), "data", [], "any", false, false, false, 13));
         foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
-            // line 15
+            // line 14
             echo "                ";
             $context["confirm"] = "return confirm(\"Are you sure you want to delete the category ?\");";
-            // line 16
+            // line 15
             echo "
                 <tr class=\"text-center\">
                     <td>";
+            // line 17
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 17), "html", null, true);
+            echo "</td>
+                    <td>";
             // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 18), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 19
-            ((twig_get_attribute($this->env, $this->source, $context["category"], "parent", [], "any", false, false, false, 19)) ? (print (twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["category"], "parent", [], "any", false, false, false, 19), "name", [], "any", false, false, false, 19), "html", null, true))) : (print ("")));
-            echo "</td>
-                    <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "updatedAt", [], "any", false, false, false, 20), "Y-m-d"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["category"], "updatedAt", [], "any", false, false, false, 18), "Y-m-d"), "html", null, true);
             echo "</td>
                     <td>
                         <a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_category_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_category_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 20)]), "html", null, true);
             echo "\" class=\"btn btn-primary\"><i
                                     class=\"fas fa-edit\"></i></a>
                         <a href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_category_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 24)]), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_category_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["category"], "id", [], "any", false, false, false, 22)]), "html", null, true);
             echo "\" onclick=\"";
-            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 24, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 22, $this->source); })()), "html", null, true);
             echo "\" class=\"btn btn-danger\"><i
                                     class=\"fas fa-trash\"></i></a>
                     </td>
@@ -136,18 +131,18 @@ class __TwigTemplate_db4b97f311e9b89a62b202a84c96c0e8a38b4d1a38f07dd3456cf3bc830
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 27
         echo "        </table>
         ";
-        // line 30
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 30, $this->source); })()), "display", [], "method", false, false, false, 30), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 28, $this->source); })()), "display", [], "method", false, false, false, 28), "html", null, true);
         echo "
         ";
-        // line 32
+        // line 30
         echo "
         <div class=\"button\">
             <a href=\"";
-        // line 34
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_category_add");
         echo "\" class=\"btn btn-primary btn-admin\">Add category</a>
         </div>
@@ -173,7 +168,7 @@ class __TwigTemplate_db4b97f311e9b89a62b202a84c96c0e8a38b4d1a38f07dd3456cf3bc830
 
     public function getDebugInfo()
     {
-        return array (  151 => 34,  147 => 32,  143 => 30,  140 => 29,  127 => 24,  122 => 22,  117 => 20,  113 => 19,  109 => 18,  105 => 16,  102 => 15,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  146 => 32,  142 => 30,  138 => 28,  135 => 27,  122 => 22,  117 => 20,  112 => 18,  108 => 17,  104 => 15,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -187,7 +182,6 @@ class __TwigTemplate_db4b97f311e9b89a62b202a84c96c0e8a38b4d1a38f07dd3456cf3bc830
         <table class=\"table table-hover\">
             <tr class=\"text-center\">
                 <th>Title</th>
-                <th>Parent</th>
                 <th>Updated</th>
                 <th>Action</th>
             </tr>
@@ -196,7 +190,6 @@ class __TwigTemplate_db4b97f311e9b89a62b202a84c96c0e8a38b4d1a38f07dd3456cf3bc830
 
                 <tr class=\"text-center\">
                     <td>{{ category.name }}</td>
-                    <td>{{ category.parent ? category.parent.name : '' }}</td>
                     <td>{{ category.updatedAt|date('Y-m-d') }}</td>
                     <td>
                         <a href=\"{{ path('admin_category_edit',{'id':category.id}) }}\" class=\"btn btn-primary\"><i
@@ -215,6 +208,6 @@ class __TwigTemplate_db4b97f311e9b89a62b202a84c96c0e8a38b4d1a38f07dd3456cf3bc830
         </div>
     </div>
 {% endblock %}
-", "admin/category/list.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/category/list.html.twig");
+", "admin/category/list.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/category/list.html.twig");
     }
 }

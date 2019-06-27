@@ -143,10 +143,7 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
         ";
         // line 38
         echo "        <div class=\"button\">
-            <a href=\"";
-        // line 39
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_survey_add");
-        echo "\" class=\"btn btn-primary btn-admin\">Add survey</a>
+            <a href=\"#\" class=\"btn btn-primary btn-admin\">Add survey</a>
         </div>
     </div>
 ";
@@ -170,7 +167,7 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
 
     public function getDebugInfo()
     {
-        return array (  148 => 39,  145 => 38,  141 => 36,  137 => 34,  120 => 23,  116 => 22,  112 => 21,  108 => 19,  105 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  145 => 38,  141 => 36,  137 => 34,  120 => 23,  116 => 22,  112 => 21,  108 => 19,  105 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -213,7 +210,7 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
         {{ pagination.display() }}
         {# include 'admin/partials/pagination.html.twig' with {'route':'admin_survey_list'} #}
         <div class=\"button\">
-            <a href=\"{{ path('admin_survey_add') }}\" class=\"btn btn-primary btn-admin\">Add survey</a>
+            <a href=\"#\" class=\"btn btn-primary btn-admin\">Add survey</a>
         </div>
     </div>
 {% endblock %}
