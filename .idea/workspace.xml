@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ab23eaf-8375-4059-9670-8e095afe9f07" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Service/ScoreCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/ScoreCalculator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/site/quiz/thanks.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/site/quiz/thanks.html.twig" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,22 +53,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/admin/quiz/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="87" column="51" selection-start-line="87" selection-start-column="51" selection-end-line="87" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Migrations/Version20190627072955.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DataFixtures/UserFixtures.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="101">
@@ -86,11 +70,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Service/ScoreCalculator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="269">
               <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Entity/Answer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-614" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/site/quiz/thanks.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -137,7 +137,6 @@
         <option value="$PROJECT_DIR$/templates/site/quiz/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/survey/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/site/survey/thanks.html.twig" />
-        <option value="$PROJECT_DIR$/templates/site/quiz/thanks.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin/category/edit.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin/category/list.html.twig" />
         <option value="$PROJECT_DIR$/templates/admin/category/add.html.twig" />
@@ -158,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/Repository/QuizRepository.php" />
         <option value="$PROJECT_DIR$/templates/site/quiz/list.html.twig" />
         <option value="$PROJECT_DIR$/src/Service/ScoreCalculator.php" />
+        <option value="$PROJECT_DIR$/templates/site/quiz/thanks.html.twig" />
       </list>
     </option>
   </component>
@@ -523,12 +523,12 @@
       <option name="presentableId" value="Default" />
       <updated>1561599646004</updated>
       <workItem from="1561599651273" duration="7901000" />
-      <workItem from="1561613334408" duration="5334000" />
+      <workItem from="1561613334408" duration="5450000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13235000" />
+    <option name="totallyTimeSpent" value="13351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="804" extended-state="0" />
@@ -560,13 +560,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/admin/question/list.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="9" column="34" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/answer/list.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -618,13 +611,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/site/survey/thanks.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/site/quiz/thanks.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" selection-start-column="16" selection-end-column="16" />
@@ -878,8 +864,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Service/ScoreCalculator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
+        <state relative-caret-position="269">
           <caret line="58" column="83" selection-start-line="58" selection-start-column="83" selection-end-line="58" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Answer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-614" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/site/quiz/thanks.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
         </state>
       </provider>
     </entry>
