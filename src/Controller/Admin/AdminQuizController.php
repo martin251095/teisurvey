@@ -100,8 +100,7 @@ class AdminQuizController extends AbstractController
         "The quiz<strong> {$quiz->getTitle()} </strong> has been edited"
       );
 
-      $emTranslation = $this->container->get('app.manager.translation');
-      $emTranslation->saveTranslations($quiz);
+      $translationManager->saveTranslations($quiz);
 
       if ($request->getSession()->has('referer')) {
         $url = $request->getSession()->get('referer');

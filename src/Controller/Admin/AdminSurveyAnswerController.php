@@ -43,7 +43,8 @@ class AdminSurveyAnswerController extends AbstractController
       $id,
       SurveyAnswer $surveyAnswer,
       AnswerRepository $answerRepository,
-      ScoreCalculator $scoreCalculator
+      ScoreCalculator $scoreCalculator,
+      TranslationManager $translationManager
     ) {
         $firstname = $surveyAnswer->getUserFirstname();
         $lastname = $surveyAnswer->getUserLastname();
@@ -55,8 +56,7 @@ class AdminSurveyAnswerController extends AbstractController
         $categories = $survey->getCategories();
 
         /** @var TranslationManager $tm */
-        $tm = $this->container->get('app.manager.translation');
-        $tm->setLocale($locale);
+        $translationManager->setLocale($locale);
 
         $data = [];
         /** @var \App\Entity\Answer $answer */

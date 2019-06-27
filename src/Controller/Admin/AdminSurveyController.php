@@ -101,7 +101,6 @@ class AdminSurveyController extends AbstractController
               "The survey <strong> {$survey->getTitle()} </strong> has been edited"
             );
 
-            $translationManager = $this->container->get('app.manager.translation');
             $translationManager->saveTranslations($survey);
 
             if ($request->getSession()->has('referer')) {

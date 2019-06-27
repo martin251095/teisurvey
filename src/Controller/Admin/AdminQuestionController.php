@@ -51,8 +51,7 @@ class AdminQuestionController extends AbstractController
             $em->persist($question);
 
             $em->flush();
-            $emTranslation = $this->container->get('app.manager.translation');
-            $emTranslation->saveTranslations($question);
+            $translationManager->saveTranslations($question);
 
             return $this->redirectToRoute('admin_question_list');
         }

@@ -92,8 +92,8 @@ class AdminAnswerController extends AbstractController
               "The answer <strong>{$answer->getAnswer()}</strong> has been edited"
             );
 
-            $emTranslation = $this->container->get('app.manager.translation');
-            $emTranslation->saveTranslations($answer);
+
+            $translationManager->saveTranslations($answer);
 
             if ($request->getSession()->has('referer')) {
                 $url = $request->getSession()->get('referer');
