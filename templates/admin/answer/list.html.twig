@@ -8,10 +8,7 @@
             <tr class="text-center">
                 <th>Question</th>
                 <th>Statement</th>
-                <th>Correctif</th>
                 <th>Points</th>
-                <th>Created</th>
-                <th>Updated</th>
                 <th>Action</th>
             </tr>
             {% for answer in pagination.data %}
@@ -20,10 +17,7 @@
                 <tr class="text-center">
                     <td>{{ answer.question.question }}</td>
                     <td>{{ answer.answer }}</td>
-                    <td>{{ answer.isCorrect }}</td>
                     <td>{{ answer.point }}</td>
-                    <td>{{ answer.createdAt|date('Y-m-d') }}</td>
-                    <td>{{ answer.updatedAt|date('Y-m-d') }}</td>
                     <td>
                         <a href="{{ path('admin_answer_edit',{'id':answer.id}) }}" class="btn btn-primary"><i
                                     class="fas fa-edit"></i></a>

@@ -175,7 +175,7 @@ class __TwigTemplate_8b7b1bb15f3b7cdf432279148f9ede9e9d9160b0fe8b6bdc010942bb896
             // line 34
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("survey_create");
             echo "\" class=\"dropdown-item\">Create a Survey</a>
-                        <a href=\"\" class=\"dropdown-item\">Create a Quiz</a>
+                        <a href=\"#\" class=\"dropdown-item\">Create a Quiz</a>
                     </div>
                 </li>
                 ";
@@ -290,7 +290,7 @@ class __TwigTemplate_8b7b1bb15f3b7cdf432279148f9ede9e9d9160b0fe8b6bdc010942bb896
                     <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"accountDropdownLink\">
                         <a href=\"/logout\" class=\"dropdown-item\">Log out</a>
                         <a href=\"{{ path('survey_create') }}\" class=\"dropdown-item\">Create a Survey</a>
-                        <a href=\"\" class=\"dropdown-item\">Create a Quiz</a>
+                        <a href=\"#\" class=\"dropdown-item\">Create a Quiz</a>
                     </div>
                 </li>
                 {% else %}
@@ -309,6 +309,6 @@ class __TwigTemplate_8b7b1bb15f3b7cdf432279148f9ede9e9d9160b0fe8b6bdc010942bb896
 {% block javascripts %}{% endblock %}
 </body>
 </html>
-", "base.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/base.html.twig");
+", "base.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/base.html.twig");
     }
 }

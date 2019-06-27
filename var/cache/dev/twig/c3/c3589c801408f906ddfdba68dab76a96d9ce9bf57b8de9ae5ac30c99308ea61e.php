@@ -92,69 +92,49 @@ class __TwigTemplate_13f05233c8bd674061fab4d2822a22934da4bce3533b62a687be6feec7f
                 <th>Id</th>
                 <th>Title</th>
                 <th>Slug</th>
-                <th>Categories</th>
-                <th>Sending Email</th>
-                <th>Created</th>
-                <th>Updated</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
             ";
-        // line 21
+        // line 17
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 21, $this->source); })()), "data", [], "any", false, false, false, 21));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 17, $this->source); })()), "data", [], "any", false, false, false, 17));
         foreach ($context['_seq'] as $context["_key"] => $context["quiz"]) {
-            // line 22
+            // line 18
             echo "                ";
             $context["confirm"] = "return confirm(\"Are you sure you want to delete the quiz ?\");";
-            // line 23
+            // line 19
             echo "
                 <tr class=\"text-center\">
                     <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "id", [], "any", false, false, false, 25), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "id", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
                     <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "title", [], "any", false, false, false, 26), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "title", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                     <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "slug", [], "any", false, false, false, 27), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 28
-            echo twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["quiz"], "categoriesName", [], "any", false, false, false, 28), ", "), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "sendingEmail", [], "any", false, false, false, 29), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "createdAt", [], "any", false, false, false, 30), "Y-m-d"), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "updatedAt", [], "any", false, false, false, 31), "Y-m-d"), "html", null, true);
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quiz"], "slug", [], "any", false, false, false, 23), "html", null, true);
             echo "</td>
                     <td>
                         <a href=\"";
-            // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quiz_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["quiz"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quiz_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["quiz"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             echo "\" class=\"btn btn-primary\"><i
                                     class=\"fas fa-edit\"></i></a>
                         <a href=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quiz_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["quiz"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quiz_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["quiz"], "id", [], "any", false, false, false, 27)]), "html", null, true);
             echo "\" onclick=\"";
-            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 35, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 27, $this->source); })()), "html", null, true);
             echo "\" class=\"btn btn-danger\"><i
                                     class=\"fas fa-trash\"></i></a>
                         <a href=\"";
-            // line 37
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("quiz_show", ["slug" => twig_get_attribute($this->env, $this->source, $context["quiz"], "slug", [], "any", false, false, false, 37)]), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("quiz_show", ["slug" => twig_get_attribute($this->env, $this->source, $context["quiz"], "slug", [], "any", false, false, false, 29)]), "html", null, true);
             echo "\"
                             class=\"btn btn-warning\"><i class=\"fas fa-arrow-circle-right\"></i></a>
                     </td>
@@ -164,18 +144,18 @@ class __TwigTemplate_13f05233c8bd674061fab4d2822a22934da4bce3533b62a687be6feec7f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['quiz'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 34
         echo "            </tbody>
         </table>
         ";
-        // line 44
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 44, $this->source); })()), "display", [], "method", false, false, false, 44), "html", null, true);
+        // line 36
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 36, $this->source); })()), "display", [], "method", false, false, false, 36), "html", null, true);
         echo "
         ";
-        // line 46
+        // line 38
         echo "        <div class=\"button\">
             <a href=\"";
-        // line 47
+        // line 39
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quiz_add");
         echo "\" class=\"btn btn-primary btn-admin\">Add quiz</a>
         </div>
@@ -201,7 +181,7 @@ class __TwigTemplate_13f05233c8bd674061fab4d2822a22934da4bce3533b62a687be6feec7f
 
     public function getDebugInfo()
     {
-        return array (  179 => 47,  176 => 46,  172 => 44,  168 => 42,  157 => 37,  150 => 35,  145 => 33,  140 => 31,  136 => 30,  132 => 29,  128 => 28,  124 => 27,  120 => 26,  116 => 25,  112 => 23,  109 => 22,  105 => 21,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  159 => 39,  156 => 38,  152 => 36,  148 => 34,  137 => 29,  130 => 27,  125 => 25,  120 => 23,  116 => 22,  112 => 21,  108 => 19,  105 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -218,10 +198,6 @@ class __TwigTemplate_13f05233c8bd674061fab4d2822a22934da4bce3533b62a687be6feec7f
                 <th>Id</th>
                 <th>Title</th>
                 <th>Slug</th>
-                <th>Categories</th>
-                <th>Sending Email</th>
-                <th>Created</th>
-                <th>Updated</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -233,10 +209,6 @@ class __TwigTemplate_13f05233c8bd674061fab4d2822a22934da4bce3533b62a687be6feec7f
                     <td>{{ quiz.id }}</td>
                     <td>{{ quiz.title }}</td>
                     <td>{{ quiz.slug }}</td>
-                    <td>{{ quiz.categoriesName|join(', ') }}</td>
-                    <td>{{ quiz.sendingEmail }}</td>
-                    <td>{{ quiz.createdAt|date('Y-m-d') }}</td>
-                    <td>{{ quiz.updatedAt|date('Y-m-d') }}</td>
                     <td>
                         <a href=\"{{ path('admin_quiz_edit', {'id':quiz.id}) }}\" class=\"btn btn-primary\"><i
                                     class=\"fas fa-edit\"></i></a>
@@ -256,6 +228,6 @@ class __TwigTemplate_13f05233c8bd674061fab4d2822a22934da4bce3533b62a687be6feec7f
         </div>
     </div>
 {% endblock %}
-", "admin/quiz/list.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/quiz/list.html.twig");
+", "admin/quiz/list.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/quiz/list.html.twig");
     }
 }

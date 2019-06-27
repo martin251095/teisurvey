@@ -35,9 +35,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('quiz_list') }}">{{ 'list.quizzes' | trans }}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('contact') }}">{{ 'contact.text' | trans }}</a>
-                </li>
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
@@ -57,7 +54,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdownLink">
                             <a href="/logout" class="dropdown-item">{{ 'logout.text' | trans }}</a>
                             <a href="{{ path('survey_create') }}" class="dropdown-item">{{ 'creation.survey' | trans }}</a>
-                            <a href="" class="dropdown-item">{{ 'creation.quiz' | trans }}</a>
+                            <a href="#" class="dropdown-item">{{ 'creation.quiz' | trans }}</a>
                         </div>
                     </li>
                 {% else %}

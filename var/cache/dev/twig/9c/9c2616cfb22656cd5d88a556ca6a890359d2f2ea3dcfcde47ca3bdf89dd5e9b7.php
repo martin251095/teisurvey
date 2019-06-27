@@ -33,7 +33,7 @@ class __TwigTemplate_967bde26c06cf70b7309c01a5e845a1972b2349b0a5cf189149ee5ec6fc
     protected function doGetParent(array $context)
     {
         // line 1
-        return "site/quiz/base.html.twig";
+        return "site/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_967bde26c06cf70b7309c01a5e845a1972b2349b0a5cf189149ee5ec6fc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "site/quiz/list.html.twig"));
 
-        $this->parent = $this->loadTemplate("site/quiz/base.html.twig", "site/quiz/list.html.twig", 1);
+        $this->parent = $this->loadTemplate("site/base.html.twig", "site/quiz/list.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -97,7 +97,7 @@ class __TwigTemplate_967bde26c06cf70b7309c01a5e845a1972b2349b0a5cf189149ee5ec6fc
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 9, $this->source); })()), "data", [], "any", false, false, false, 9));
         foreach ($context['_seq'] as $context["_key"] => $context["quizzes"]) {
             // line 10
-            echo "                <div class=\"offset-1 col-5\">
+            echo "                <div class=\"offset-1 col-md-5\">
                     <div class=\"card bg-light mb-3\">
                         <div class=\"card-header text-center\">
                             ";
@@ -160,7 +160,7 @@ class __TwigTemplate_967bde26c06cf70b7309c01a5e845a1972b2349b0a5cf189149ee5ec6fc
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'site/quiz/base.html.twig' %}
+        return new Source("{% extends 'site/base.html.twig' %}
 
 {% block title %}Quizzes{% endblock %}
 
@@ -169,7 +169,7 @@ class __TwigTemplate_967bde26c06cf70b7309c01a5e845a1972b2349b0a5cf189149ee5ec6fc
         <h3 class=\"my-5\">{{ 'page.quiz.title' | trans() }}</h3>
             <div class=\"row\">
                 {% for quizzes in pagination.data %}
-                <div class=\"offset-1 col-5\">
+                <div class=\"offset-1 col-md-5\">
                     <div class=\"card bg-light mb-3\">
                         <div class=\"card-header text-center\">
                             {{ quizzes.title }}
@@ -190,6 +190,6 @@ class __TwigTemplate_967bde26c06cf70b7309c01a5e845a1972b2349b0a5cf189149ee5ec6fc
     </div>
 
 {% endblock %}
-", "site/quiz/list.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/site/quiz/list.html.twig");
+", "site/quiz/list.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/site/quiz/list.html.twig");
     }
 }

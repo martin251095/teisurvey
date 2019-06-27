@@ -20,6 +20,7 @@ class AdminUsersType extends ApplicationType
         $builder
           ->add('username', TextType::class, $this->getConfiguration('Username', 'Username'))
           ->add('email', EmailType::class, $this->getConfiguration('Email', 'Email'))
+          ->add('roles')
           ->add('enabled');
     }
 

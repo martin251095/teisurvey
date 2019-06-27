@@ -8,6 +8,17 @@ html {
     overflow-x: hidden;
 }
 
+.titlesurvey{
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.titlequiz{
+    font-size: 35px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
 
 /* template admin/ */
 

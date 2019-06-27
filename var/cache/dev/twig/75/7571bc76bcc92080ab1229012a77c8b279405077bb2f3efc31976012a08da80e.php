@@ -92,60 +92,39 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
                 <th>Id</th>
                 <th>Title</th>
                 <th>Slug</th>
-                <th>Created</th>
-                <th>Updated</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
             ";
-        // line 19
+        // line 17
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 19, $this->source); })()), "data", [], "any", false, false, false, 19));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 17, $this->source); })()), "data", [], "any", false, false, false, 17));
         foreach ($context['_seq'] as $context["_key"] => $context["survey"]) {
-            // line 20
+            // line 18
             echo "                ";
             $context["confirm"] = "return confirm(\"Are you sure you want to delete the survey ?\");";
-            // line 21
+            // line 19
             echo "
                 <tr class=\"text-center\">
                     <td>";
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "id", [], "any", false, false, false, 21), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "title", [], "any", false, false, false, 22), "html", null, true);
+            echo "</td>
+                    <td>";
             // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "id", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "title", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "slug", [], "any", false, false, false, 25), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "createdAt", [], "any", false, false, false, 26), "Y-m-d"), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "updatedAt", [], "any", false, false, false, 27), "Y-m-d"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["survey"], "slug", [], "any", false, false, false, 23), "html", null, true);
             echo "</td>
                     <td>
-                        <a href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_survey_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["survey"], "id", [], "any", false, false, false, 29)]), "html", null, true);
-            echo "\" class=\"btn btn-primary\"><i
+                        <a href=\"#\" class=\"btn btn-primary\"><i
                                     class=\"fas fa-edit\"></i></a>
-                        <a href=\"";
-            // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_survey_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["survey"], "id", [], "any", false, false, false, 31)]), "html", null, true);
-            echo "\" onclick=\"";
-            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 31, $this->source); })()), "html", null, true);
-            echo "\" class=\"btn btn-danger\"><i
+                        <a href=\"#\" class=\"btn btn-danger\"><i
                                     class=\"fas fa-trash\"></i></a>
-                        <a href=\"";
-            // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("survey_show", ["slug" => twig_get_attribute($this->env, $this->source, $context["survey"], "slug", [], "any", false, false, false, 33)]), "html", null, true);
-            echo "\"
+                        <a href=\"#\"
                            class=\"btn btn-warning\"><i class=\"fas fa-arrow-circle-right\"></i></a>
                     </td>
                 </tr>
@@ -154,18 +133,18 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['survey'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 38
+        // line 34
         echo "            </tbody>
         </table>
         ";
-        // line 40
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 40, $this->source); })()), "display", [], "method", false, false, false, 40), "html", null, true);
+        // line 36
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 36, $this->source); })()), "display", [], "method", false, false, false, 36), "html", null, true);
         echo "
         ";
-        // line 42
+        // line 38
         echo "        <div class=\"button\">
             <a href=\"";
-        // line 43
+        // line 39
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_survey_add");
         echo "\" class=\"btn btn-primary btn-admin\">Add survey</a>
         </div>
@@ -191,7 +170,7 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
 
     public function getDebugInfo()
     {
-        return array (  169 => 43,  166 => 42,  162 => 40,  158 => 38,  147 => 33,  140 => 31,  135 => 29,  130 => 27,  126 => 26,  122 => 25,  118 => 24,  114 => 23,  110 => 21,  107 => 20,  103 => 19,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  148 => 39,  145 => 38,  141 => 36,  137 => 34,  120 => 23,  116 => 22,  112 => 21,  108 => 19,  105 => 18,  101 => 17,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -208,8 +187,6 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
                 <th>Id</th>
                 <th>Title</th>
                 <th>Slug</th>
-                <th>Created</th>
-                <th>Updated</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -221,14 +198,12 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
                     <td>{{ survey.id }}</td>
                     <td>{{ survey.title }}</td>
                     <td>{{ survey.slug }}</td>
-                    <td>{{ survey.createdAt|date('Y-m-d') }}</td>
-                    <td>{{ survey.updatedAt|date('Y-m-d') }}</td>
                     <td>
-                        <a href=\"{{ path('admin_survey_edit', {'id':survey.id}) }}\" class=\"btn btn-primary\"><i
+                        <a href=\"#\" class=\"btn btn-primary\"><i
                                     class=\"fas fa-edit\"></i></a>
-                        <a href=\"{{ path('admin_survey_delete', {'id':survey.id}) }}\" onclick=\"{{ confirm }}\" class=\"btn btn-danger\"><i
+                        <a href=\"#\" class=\"btn btn-danger\"><i
                                     class=\"fas fa-trash\"></i></a>
-                        <a href=\"{{ path('survey_show', {'slug':survey.slug}) }}\"
+                        <a href=\"#\"
                            class=\"btn btn-warning\"><i class=\"fas fa-arrow-circle-right\"></i></a>
                     </td>
                 </tr>
@@ -242,6 +217,6 @@ class __TwigTemplate_15731f0d33135d8f660d6f520d7a063a89ad2ece263a14510eb1f607685
         </div>
     </div>
 {% endblock %}
-", "admin/survey/list.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/survey/list.html.twig");
+", "admin/survey/list.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/survey/list.html.twig");
     }
 }

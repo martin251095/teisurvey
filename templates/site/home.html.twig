@@ -1,3 +1,45 @@
+{% extends 'site/base.html.twig' %}
+
 {% block title %}Homepage{% endblock %}
 
-{% extends 'site/base.html.twig' %}
+{% block body %}
+    <p class="titlesurvey"><strong>Récent surveys</strong></p>
+        <div class="row">
+            <div class="offset-1 col-10">
+                <div class="row">
+                    {% for survey in surveys %}
+                        <div class="col-md-4 sm-6">
+                            <div class="container-box card bg-light mb-3">
+                                <div class="card-header text-center">
+                                    {{ survey.title }}
+                                </div>
+                                <div class="card-body">
+                                    <p>{{ survey.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    <p class="titlequiz"><strong>Récent quizzes</strong></p>
+    <div class="row">
+        <div class="offset-1 col-10">
+            <div class="row">
+                {% for quiz in quizzes %}
+                    <div class="col-md-4 sm-6">
+                        <div class="container-box card bg-light mb-3">
+                            <div class="card-header text-center">
+                                {{ quiz.title }}
+                            </div>
+                            <div class="card-body">
+                                <p>{{ quiz.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

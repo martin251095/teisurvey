@@ -88,59 +88,49 @@ class __TwigTemplate_e816634f6803621cbdc2b3d0e771a71f63b8793825d3a41c819f9da0e68
         echo "    <div class=\"container-fluid\">
         <table class=\"table table-hover\">
             <tr class=\"text-center\">
-                <th>Id</th>
                 <th>UserName</th>
-                <th>Email</th>
                 <th>Rôle</th>
                 <th>Actions</th>
             </tr>
             ";
-        // line 15
+        // line 13
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 15, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 13, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 16
+            // line 14
             echo "                ";
             $context["confirm"] = "";
-            // line 17
+            // line 15
             echo "                ";
-            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17) == twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 17))) {
-                // line 18
+            if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "id", [], "any", false, false, false, 15) == twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 15))) {
+                // line 16
                 echo "                    ";
                 $context["confirm"] = "return confirm(\"Are you sure you want to delete yourself ?\");";
-                // line 19
+                // line 17
                 echo "                ";
             }
-            // line 20
+            // line 18
             echo "
                 <tr class=\"text-center\">
                     <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 22), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 20), "html", null, true);
             echo "</td>
                     <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "emailCanonical", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 25), ", "), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_join_filter(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 21), ", "), "html", null, true);
             echo "</td>
                     <td>
                         <a href=\"";
-            // line 27
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_user_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 27)]), "html", null, true);
+            // line 23
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_user_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 23)]), "html", null, true);
             echo "\" class=\"btn btn-primary\"><i
                                     class=\"fas fa-edit\"></i></a>
                         <a href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_user_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_user_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             echo "\" onclick=\"";
-            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 29, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 25, $this->source); })()), "html", null, true);
             echo "\" class=\"btn btn-danger\"><i
                                     class=\"fas fa-trash\"></i></a>
                     </td>
@@ -150,11 +140,11 @@ class __TwigTemplate_e816634f6803621cbdc2b3d0e771a71f63b8793825d3a41c819f9da0e68
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 30
         echo "        </table>
         <div class=\"button\">
             <a href=\"";
-        // line 36
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_user_add");
         echo "\" class=\"btn btn-primary btn-admin\">Add user</a>
         </div>
@@ -181,7 +171,7 @@ class __TwigTemplate_e816634f6803621cbdc2b3d0e771a71f63b8793825d3a41c819f9da0e68
 
     public function getDebugInfo()
     {
-        return array (  158 => 36,  154 => 34,  141 => 29,  136 => 27,  131 => 25,  127 => 24,  123 => 23,  119 => 22,  115 => 20,  112 => 19,  109 => 18,  106 => 17,  103 => 16,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  148 => 32,  144 => 30,  131 => 25,  126 => 23,  121 => 21,  117 => 20,  113 => 18,  110 => 17,  107 => 16,  104 => 15,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -194,9 +184,7 @@ class __TwigTemplate_e816634f6803621cbdc2b3d0e771a71f63b8793825d3a41c819f9da0e68
     <div class=\"container-fluid\">
         <table class=\"table table-hover\">
             <tr class=\"text-center\">
-                <th>Id</th>
                 <th>UserName</th>
-                <th>Email</th>
                 <th>Rôle</th>
                 <th>Actions</th>
             </tr>
@@ -207,9 +195,7 @@ class __TwigTemplate_e816634f6803621cbdc2b3d0e771a71f63b8793825d3a41c819f9da0e68
                 {% endif %}
 
                 <tr class=\"text-center\">
-                    <td>{{ user.id }}</td>
                     <td>{{ user.username }}</td>
-                    <td>{{ user.emailCanonical }}</td>
                     <td>{{ user.roles|join(', ') }}</td>
                     <td>
                         <a href=\"{{ path('admin_user_edit',{'id':user.id}) }}\" class=\"btn btn-primary\"><i
@@ -226,6 +212,6 @@ class __TwigTemplate_e816634f6803621cbdc2b3d0e771a71f63b8793825d3a41c819f9da0e68
     </div>
 
 {% endblock %}
-", "admin/user/list.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/user/list.html.twig");
+", "admin/user/list.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/user/list.html.twig");
     }
 }

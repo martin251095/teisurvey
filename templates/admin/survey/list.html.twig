@@ -10,8 +10,6 @@
                 <th>Id</th>
                 <th>Title</th>
                 <th>Slug</th>
-                <th>Created</th>
-                <th>Updated</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -23,14 +21,12 @@
                     <td>{{ survey.id }}</td>
                     <td>{{ survey.title }}</td>
                     <td>{{ survey.slug }}</td>
-                    <td>{{ survey.createdAt|date('Y-m-d') }}</td>
-                    <td>{{ survey.updatedAt|date('Y-m-d') }}</td>
                     <td>
-                        <a href="{{ path('admin_survey_edit', {'id':survey.id}) }}" class="btn btn-primary"><i
+                        <a href="#" class="btn btn-primary"><i
                                     class="fas fa-edit"></i></a>
-                        <a href="{{ path('admin_survey_delete', {'id':survey.id}) }}" onclick="{{ confirm }}" class="btn btn-danger"><i
+                        <a href="#" class="btn btn-danger"><i
                                     class="fas fa-trash"></i></a>
-                        <a href="{{ path('survey_show', {'slug':survey.slug}) }}"
+                        <a href="#"
                            class="btn btn-warning"><i class="fas fa-arrow-circle-right"></i></a>
                     </td>
                 </tr>
@@ -40,7 +36,7 @@
         {{ pagination.display() }}
         {# include 'admin/partials/pagination.html.twig' with {'route':'admin_survey_list'} #}
         <div class="button">
-            <a href="{{ path('admin_survey_add') }}" class="btn btn-primary btn-admin">Add survey</a>
+            <a href="#" class="btn btn-primary btn-admin">Add survey</a>
         </div>
     </div>
 {% endblock %}

@@ -56,9 +56,8 @@ class AdminQuizController extends AbstractController
     if ($form->isSubmitted() && $form->isValid()) {
       $em->persist($quiz);
       $em->flush();
-      /** @var TranslationManager $emTranslation **/
-      $emTranslation = $this->container->get('app.manager.translation');
-      $emTranslation->saveTranslations($quiz);
+      /** @var TranslationManager $translationManager **/
+      $translationManager->saveTranslations($quiz);
 
       return $this->redirectToRoute('admin_quiz_list');
     }

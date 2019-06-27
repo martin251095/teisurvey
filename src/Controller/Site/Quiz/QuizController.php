@@ -49,6 +49,16 @@ class QuizController extends AbstractController
       ]);
     }
 
+  /**
+   *  @Route("/quiz/create", name="quiz_create")
+   *
+   */
+  public function create()
+  {
+    // TO DO
+    return $this->render('site/quiz/add.html.twig');
+  }
+
     /**
      * Displays the quiz
      *
@@ -258,9 +268,7 @@ class QuizController extends AbstractController
               ->buildMessage($options, 'quiz')
               ->drop();
 
-            return $this->redirectToRoute('quiz_thanks', [
-              'idquiz' => $idquiz,
-            ]);
+            return $this->redirectToRoute('quiz_thanks');
         }
 
         return $this->render(

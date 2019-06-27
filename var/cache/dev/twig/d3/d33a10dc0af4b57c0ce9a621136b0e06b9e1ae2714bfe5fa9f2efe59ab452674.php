@@ -62,22 +62,22 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
 ";
         // line 20
         $this->displayBlock('nav', $context, $blocks);
-        // line 75
+        // line 72
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 75, $this->source); })()), "flashes", [], "any", false, false, false, 75));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 72, $this->source); })()), "flashes", [], "any", false, false, false, 72));
         foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
-            // line 76
+            // line 73
             echo "    <div class=\"container\">
         <div class=\"alert alert-";
-            // line 77
+            // line 74
             echo twig_escape_filter($this->env, $context["label"], "html", null, true);
             echo "\">
             ";
-            // line 78
+            // line 75
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($context["messages"]);
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-                // line 79
+                // line 76
                 echo "                <p>";
                 echo $context["message"];
                 echo "</p>
@@ -86,7 +86,7 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 81
+            // line 78
             echo "        </div>
     </div>
 ";
@@ -94,14 +94,14 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 84
+        // line 81
         echo "
 ";
-        // line 85
+        // line 82
         $this->displayBlock('body', $context, $blocks);
-        // line 86
+        // line 83
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 87
+        // line 84
         echo "</body>
 </html>
 ";
@@ -219,34 +219,26 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("list.quizzes"), "html", null, true);
         echo "</a>
                 </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"";
-        // line 39
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
-        echo "\">";
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("contact.text"), "html", null, true);
-        echo "</a>
-                </li>
             </ul>
             <ul class=\"navbar-nav ml-auto\">
                 <li class=\"nav-item dropdown\">
                     <a class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\"
                        aria-haspopup=\"true\" aria-expanded=\"false\">";
-        // line 45
+        // line 42
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("language.text"), "html", null, true);
         echo "</a>
                     <div class=\"dropdown-menu\">
                         ";
-        // line 47
+        // line 44
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["locales"]) || array_key_exists("locales", $context) ? $context["locales"] : (function () { throw new RuntimeError('Variable "locales" does not exist.', 47, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["locales"]) || array_key_exists("locales", $context) ? $context["locales"] : (function () { throw new RuntimeError('Variable "locales" does not exist.', 44, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["locale"]) {
-            // line 48
+            // line 45
             echo "                            <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "request", [], "any", false, false, false, 48), "attributes", [], "any", false, false, false, 48), "get", [0 => "_route"], "method", false, false, false, 48), twig_array_merge(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "request", [], "any", false, false, false, 48), "get", [0 => "_route_params"], "method", false, false, false, 48), ["_locale" => $context["locale"]])), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "request", [], "any", false, false, false, 45), "attributes", [], "any", false, false, false, 45), "get", [0 => "_route"], "method", false, false, false, 45), twig_array_merge(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "request", [], "any", false, false, false, 45), "get", [0 => "_route_params"], "method", false, false, false, 45), ["_locale" => $context["locale"]])), "html", null, true);
             echo "\"
                                class=\"dropdown-item\">";
-            // line 49
+            // line 46
             echo twig_escape_filter($this->env, twig_upper_filter($this->env, $context["locale"]), "html", null, true);
             echo "</a>
                         ";
@@ -254,54 +246,54 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['locale'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 48
         echo "                    </div>
                 </li>
                 ";
-        // line 53
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53)) {
-            // line 54
+        // line 50
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 50, $this->source); })()), "user", [], "any", false, false, false, 50)) {
+            // line 51
             echo "                    <li class=\"nav-item dropdown\">
                         <a href=\"#\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\"
                            id=\"accountDropdownLink\">";
-            // line 56
+            // line 53
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("account.text"), "html", null, true);
             echo "</a>
                         <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"accountDropdownLink\">
                             <a href=\"/logout\" class=\"dropdown-item\">";
-            // line 58
+            // line 55
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("logout.text"), "html", null, true);
             echo "</a>
                             <a href=\"";
-            // line 59
+            // line 56
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("survey_create");
             echo "\" class=\"dropdown-item\">";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("creation.survey"), "html", null, true);
             echo "</a>
-                            <a href=\"\" class=\"dropdown-item\">";
-            // line 60
+                            <a href=\"#\" class=\"dropdown-item\">";
+            // line 57
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans("creation.quiz"), "html", null, true);
             echo "</a>
                         </div>
                     </li>
                 ";
         } else {
-            // line 64
+            // line 61
             echo "                    <li class=\"nav-item\">
                         <a href=\"";
-            // line 65
+            // line 62
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\HttpFoundationExtension']->generateAbsoluteUrl("/registration"), "html", null, true);
             echo "\" class=\"nav-link\">Registration</a>
                     </li>
                     <li>
                         <a href=\"";
-            // line 68
+            // line 65
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\HttpFoundationExtension']->generateAbsoluteUrl("/login"), "html", null, true);
             echo "\" class=\"nav-link\">Connexion</a>
                     </li>
                 ";
         }
-        // line 71
+        // line 68
         echo "            </ul>
         </div>
     </nav>
@@ -314,7 +306,7 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
 
     }
 
-    // line 85
+    // line 82
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -332,7 +324,7 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
 
     }
 
-    // line 86
+    // line 83
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -362,7 +354,7 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
 
     public function getDebugInfo()
     {
-        return array (  336 => 86,  318 => 85,  305 => 71,  299 => 68,  293 => 65,  290 => 64,  283 => 60,  277 => 59,  273 => 58,  268 => 56,  264 => 54,  262 => 53,  258 => 51,  250 => 49,  245 => 48,  241 => 47,  236 => 45,  225 => 39,  217 => 36,  209 => 33,  201 => 30,  190 => 22,  187 => 21,  177 => 20,  164 => 15,  160 => 14,  156 => 13,  151 => 11,  145 => 7,  135 => 6,  117 => 5,  105 => 87,  103 => 86,  101 => 85,  98 => 84,  90 => 81,  81 => 79,  77 => 78,  73 => 77,  70 => 76,  66 => 75,  64 => 20,  60 => 18,  58 => 6,  54 => 5,  48 => 1,);
+        return array (  328 => 83,  310 => 82,  297 => 68,  291 => 65,  285 => 62,  282 => 61,  275 => 57,  269 => 56,  265 => 55,  260 => 53,  256 => 51,  254 => 50,  250 => 48,  242 => 46,  237 => 45,  233 => 44,  228 => 42,  217 => 36,  209 => 33,  201 => 30,  190 => 22,  187 => 21,  177 => 20,  164 => 15,  160 => 14,  156 => 13,  151 => 11,  145 => 7,  135 => 6,  117 => 5,  105 => 84,  103 => 83,  101 => 82,  98 => 81,  90 => 78,  81 => 76,  77 => 75,  73 => 74,  70 => 73,  66 => 72,  64 => 20,  60 => 18,  58 => 6,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -404,9 +396,6 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"{{ path('quiz_list') }}\">{{ 'list.quizzes' | trans }}</a>
                 </li>
-                <li class=\"nav-item\">
-                    <a class=\"nav-link\" href=\"{{ path('contact') }}\">{{ 'contact.text' | trans }}</a>
-                </li>
             </ul>
             <ul class=\"navbar-nav ml-auto\">
                 <li class=\"nav-item dropdown\">
@@ -426,7 +415,7 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
                         <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"accountDropdownLink\">
                             <a href=\"/logout\" class=\"dropdown-item\">{{ 'logout.text' | trans }}</a>
                             <a href=\"{{ path('survey_create') }}\" class=\"dropdown-item\">{{ 'creation.survey' | trans }}</a>
-                            <a href=\"\" class=\"dropdown-item\">{{ 'creation.quiz' | trans }}</a>
+                            <a href=\"#\" class=\"dropdown-item\">{{ 'creation.quiz' | trans }}</a>
                         </div>
                     </li>
                 {% else %}
@@ -455,6 +444,6 @@ class __TwigTemplate_a219472d74406a59b2761257471ff16e1161cc55eff27fec2f22eeb5907
 {% block javascripts %}{% endblock %}
 </body>
 </html>
-", "site/base.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/site/base.html.twig");
+", "site/base.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/site/base.html.twig");
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Quiz;
 use App\Entity\Survey;
 use App\Service\NotificationManager;
 use FOS\UserBundle\Util\TokenGenerator;
@@ -137,7 +138,7 @@ class AdminUsersController extends AbstractController
     {
         $email = $user->getEmail();
 
-        $repoSurvey = $manager->getRepository(Survey::class);
+        $repoSurvey = $manager->getRepository(Quiz::class);
         $sendingEmail = $repoSurvey->findOneBy([
           'sendingEmail' => $email,
         ]);

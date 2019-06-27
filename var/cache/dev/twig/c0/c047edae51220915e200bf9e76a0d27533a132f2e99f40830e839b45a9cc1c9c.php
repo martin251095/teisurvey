@@ -92,51 +92,46 @@ class __TwigTemplate_e5dc421103f8127766756799b20aa9c8709f54d03b3aab7cfdae771094b
                 <th>Last name</th>
                 <th>Quiz</th>
                 <th>Score of the user</th>
-                <th>Score of the quiz</th>
                 <th>Action</th>
             </tr>
             ";
-        // line 16
+        // line 15
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 16, $this->source); })()), "data", [], "any", false, false, false, 16));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 15, $this->source); })()), "data", [], "any", false, false, false, 15));
         foreach ($context['_seq'] as $context["_key"] => $context["quizanswer"]) {
-            // line 17
+            // line 16
             echo "                ";
             $context["confirm"] = "return confirm(\"Are you sure you want to delete ?\");";
-            // line 18
+            // line 17
             echo "
                 <tr class=\"text-center\">
                     <td>";
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "userFirstname", [], "any", false, false, false, 19), "html", null, true);
+            echo "</td>
+                    <td>";
             // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "userFirstname", [], "any", false, false, false, 20), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "userLastname", [], "any", false, false, false, 20), "html", null, true);
             echo "</td>
                     <td>";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "userLastname", [], "any", false, false, false, 21), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "quiz", [], "any", false, false, false, 21), "title", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
                     <td>";
             // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "quiz", [], "any", false, false, false, 22), "title", [], "any", false, false, false, 22), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "score", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "total", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quizanswer"], "score", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                     <td>
                         <a href=\"";
-            // line 26
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quizanswer_details", ["id" => twig_get_attribute($this->env, $this->source, $context["quizanswer"], "id", [], "any", false, false, false, 26)]), "html", null, true);
+            // line 24
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quizanswer_details", ["id" => twig_get_attribute($this->env, $this->source, $context["quizanswer"], "id", [], "any", false, false, false, 24)]), "html", null, true);
             echo "\"
                            class=\"btn btn-primary\"><i class=\"fas fa-eye\"></i></a>
                         <a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quizanswer_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["quizanswer"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_quizanswer_delete", ["id" => twig_get_attribute($this->env, $this->source, $context["quizanswer"], "id", [], "any", false, false, false, 26)]), "html", null, true);
             echo "\" onclick=\"";
-            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 28, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["confirm"]) || array_key_exists("confirm", $context) ? $context["confirm"] : (function () { throw new RuntimeError('Variable "confirm" does not exist.', 26, $this->source); })()), "html", null, true);
             echo "\" class=\"btn btn-danger\"><i
                                     class=\"fas fa-trash\"></i></a>
                     </td>
@@ -146,14 +141,14 @@ class __TwigTemplate_e5dc421103f8127766756799b20aa9c8709f54d03b3aab7cfdae771094b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['quizanswer'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 31
         echo "        </table>
         ";
-        // line 34
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 34, $this->source); })()), "display", [], "method", false, false, false, 34), "html", null, true);
+        // line 32
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 32, $this->source); })()), "display", [], "method", false, false, false, 32), "html", null, true);
         echo "
         ";
-        // line 36
+        // line 34
         echo "    </div>
 ";
         
@@ -176,7 +171,7 @@ class __TwigTemplate_e5dc421103f8127766756799b20aa9c8709f54d03b3aab7cfdae771094b
 
     public function getDebugInfo()
     {
-        return array (  157 => 36,  153 => 34,  150 => 33,  137 => 28,  132 => 26,  127 => 24,  123 => 23,  119 => 22,  115 => 21,  111 => 20,  107 => 18,  104 => 17,  100 => 16,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  152 => 34,  148 => 32,  145 => 31,  132 => 26,  127 => 24,  122 => 22,  118 => 21,  114 => 20,  110 => 19,  106 => 17,  103 => 16,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -193,7 +188,6 @@ class __TwigTemplate_e5dc421103f8127766756799b20aa9c8709f54d03b3aab7cfdae771094b
                 <th>Last name</th>
                 <th>Quiz</th>
                 <th>Score of the user</th>
-                <th>Score of the quiz</th>
                 <th>Action</th>
             </tr>
             {% for quizanswer in pagination.data %}
@@ -204,7 +198,6 @@ class __TwigTemplate_e5dc421103f8127766756799b20aa9c8709f54d03b3aab7cfdae771094b
                     <td>{{ quizanswer.userLastname }}</td>
                     <td>{{ quizanswer.quiz.title }}</td>
                     <td>{{ quizanswer.score }}</td>
-                    <td>{{ quizanswer.total }}</td>
                     <td>
                         <a href=\"{{ path('admin_quizanswer_details',{'id':quizanswer.id}) }}\"
                            class=\"btn btn-primary\"><i class=\"fas fa-eye\"></i></a>
@@ -218,6 +211,6 @@ class __TwigTemplate_e5dc421103f8127766756799b20aa9c8709f54d03b3aab7cfdae771094b
         {# include 'admin/partials/pagination.html.twig' with {'route':'admin_answer_list'} #}
     </div>
 {% endblock %}
-", "admin/quizanswer/list.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/quizanswer/list.html.twig");
+", "admin/quizanswer/list.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/quizanswer/list.html.twig");
     }
 }

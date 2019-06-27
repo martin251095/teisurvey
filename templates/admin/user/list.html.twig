@@ -6,9 +6,7 @@
     <div class="container-fluid">
         <table class="table table-hover">
             <tr class="text-center">
-                <th>Id</th>
                 <th>UserName</th>
-                <th>Email</th>
                 <th>Rôle</th>
                 <th>Actions</th>
             </tr>
@@ -19,9 +17,7 @@
                 {% endif %}
 
                 <tr class="text-center">
-                    <td>{{ user.id }}</td>
                     <td>{{ user.username }}</td>
-                    <td>{{ user.emailCanonical }}</td>
                     <td>{{ user.roles|join(', ') }}</td>
                     <td>
                         <a href="{{ path('admin_user_edit',{'id':user.id}) }}" class="btn btn-primary"><i

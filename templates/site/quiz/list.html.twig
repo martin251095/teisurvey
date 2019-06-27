@@ -1,4 +1,4 @@
-{% extends 'site/quiz/base.html.twig' %}
+{% extends 'site/base.html.twig' %}
 
 {% block title %}Quizzes{% endblock %}
 
@@ -7,7 +7,7 @@
         <h3 class="my-5">{{ 'page.quiz.title' | trans() }}</h3>
             <div class="row">
                 {% for quizzes in pagination.data %}
-                <div class="offset-1 col-5">
+                <div class="offset-1 col-md-5">
                     <div class="card bg-light mb-3">
                         <div class="card-header text-center">
                             {{ quizzes.title }}

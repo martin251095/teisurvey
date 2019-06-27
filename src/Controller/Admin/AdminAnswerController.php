@@ -51,8 +51,7 @@ class AdminAnswerController extends AbstractController
 
             $em->persist($answer);
             $em->flush();
-            $emTranslation = $this->container->get('app.manager.translation');
-            $emTranslation->saveTranslations($answer);
+            $translationManager->saveTranslations($answer);
 
             return $this->redirectToRoute('admin_answer_list');
         }
@@ -78,7 +77,6 @@ class AdminAnswerController extends AbstractController
     {
         $locales = $translationManager->getAvailableLocales();
 
-        $translationManager = $this->container->get('app.manager.translation');
         $translationManager->setTranslations($answer);
 
         $form = $this->createForm(AnswerType::class, $answer);

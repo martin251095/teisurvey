@@ -210,8 +210,6 @@ class __TwigTemplate_c617bd729cbd713b7f56f98c113a173453db6001b62613a323067598818
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 44
         echo "    </div>
-    </div>
-    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -282,8 +280,7 @@ class __TwigTemplate_c617bd729cbd713b7f56f98c113a173453db6001b62613a323067598818
             {% endfor %}
         {% endfor %}
     </div>
-    </div>
-    </div>
-{% endblock %}", "admin/quizanswer/details.html.twig", "/Users/mpo/Documents/TEI/mysurvey/symfony/templates/admin/quizanswer/details.html.twig");
+{% endblock %}
+", "admin/quizanswer/details.html.twig", "/Users/mpo/Documents/TEIFINAL/symfony/templates/admin/quizanswer/details.html.twig");
     }
 }
