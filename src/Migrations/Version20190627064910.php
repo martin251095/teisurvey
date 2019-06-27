@@ -22,7 +22,7 @@ final class Version20190627064910 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE quiz_category ADD id INT NOT NULL');
+        $this->addSql('ALTER TABLE quiz_category ADD id INT AUTO_INCREMENT NOT NULL');
         $this->addSql('ALTER TABLE quiz_category DROP FOREIGN KEY FK_D088E08412469DE2');
         $this->addSql('ALTER TABLE quiz_category DROP FOREIGN KEY FK_D088E084853CD175');
         $this->addSql('ALTER TABLE quiz_category DROP PRIMARY KEY');
