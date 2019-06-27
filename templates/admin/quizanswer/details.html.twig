@@ -11,7 +11,7 @@
             {% set categoryMax = score.maxCategories[categoryItem.id] %}
 
             <h5 class="category_title">{{ categoryName }} ({{ categoryScore ~ ' / ' ~ categoryMax }})</h5>
-            {% for questionItem in categoryItem.category.questions %}
+            {% for questionItem in categoryItem.questions %}
                 {% set questionName = questionItem.question %}
                 {% set questionScore =  score.scoreQuestions[questionItem.id] %}
                 {% set questionMax = score.maxQuestions[questionItem.id] %}
@@ -19,8 +19,8 @@
                 <h6 class="question_statement">{{ questionName }} ({{ questionScore ~ ' / ' ~ questionMax }}):</h6>
                 <div class="text_info">Answers of the user :</div>
                 <ul class="answer_statement">
-                    {% if data[categoryItem.category.id]['questions'][questionItem.id] is defined %}
-                        {% for answer in data[categoryItem.category.id]['questions'][questionItem.id].answers %}
+                    {% if data[categoryItem.id]['questions'][questionItem.id] is defined %}
+                        {% for answer in data[categoryItem.id]['questions'][questionItem.id].answers %}
                             <li style="color:{{ answer.getIsCorrect() ? 'green' : 'red' }}">
                                 {{ answer.answer }}
                             </li>
